@@ -1,0 +1,339 @@
+{
+  "commit": "aafc7cda61b9fcb47d1536dbfad664c10352431e",
+  "changed_files": [
+    "metaphor_backend/agents/module2_metaphor_generation/feature_rewrite_agent.py",
+    "metaphor_backend/agents/module2_metaphor_generation/module2_controller.py"
+  ],
+  "files": [
+    {
+      "path": "metaphor_backend/agents/__init__.py",
+      "original_sha256": "d5cc726bdf66f5cc4aed285fb6e98c93b2864c82f19c8a036eab61265685e2db",
+      "executed_sha256": "d5cc726bdf66f5cc4aed285fb6e98c93b2864c82f19c8a036eab61265685e2db"
+    },
+    {
+      "path": "metaphor_backend/agents/module1_data_understanding/__init__.py",
+      "original_sha256": "203955bb1261d5e23ffb1738138cb9d9baf23dfa3a56e180d6a049f3a9db35dc",
+      "executed_sha256": "203955bb1261d5e23ffb1738138cb9d9baf23dfa3a56e180d6a049f3a9db35dc"
+    },
+    {
+      "path": "metaphor_backend/agents/module1_data_understanding/context_analysis_agent.py",
+      "original_sha256": "143fb76196e6334411d4f1b51d23091b810288f4a3865fb92694877b759f80a3",
+      "executed_sha256": "143fb76196e6334411d4f1b51d23091b810288f4a3865fb92694877b759f80a3"
+    },
+    {
+      "path": "metaphor_backend/agents/module1_data_understanding/data_pattern_agent.py",
+      "original_sha256": "1f0face66087e98e69d214c452bdef2fb8aa2a8719d9c4c7b22ad0ccecfbc0d0",
+      "executed_sha256": "1f0face66087e98e69d214c452bdef2fb8aa2a8719d9c4c7b22ad0ccecfbc0d0"
+    },
+    {
+      "path": "metaphor_backend/agents/module1_data_understanding/header_semantic_agent.py",
+      "original_sha256": "e09bcfe7035f520aad75f0d69f138957cdb2ab8fc1ae18ac909303faa0c66322",
+      "executed_sha256": "e09bcfe7035f520aad75f0d69f138957cdb2ab8fc1ae18ac909303faa0c66322"
+    },
+    {
+      "path": "metaphor_backend/agents/module1_data_understanding/module1_controller.py",
+      "original_sha256": "d9c2a6f68034f2e264d6eafab7f3b9cfbf9f26162046037d3e88c66e699c5b74",
+      "executed_sha256": "d9c2a6f68034f2e264d6eafab7f3b9cfbf9f26162046037d3e88c66e699c5b74"
+    },
+    {
+      "path": "metaphor_backend/agents/module2_metaphor_generation/__init__.py",
+      "original_sha256": "d8513a1a53eecd36c9cccf071c34c9483a816f0ceec836d04177347b0c696d39",
+      "executed_sha256": "d8513a1a53eecd36c9cccf071c34c9483a816f0ceec836d04177347b0c696d39"
+    },
+    {
+      "path": "metaphor_backend/agents/module2_metaphor_generation/blind_metaphor_agent.py",
+      "original_sha256": "65b03c14286f0df89bba6740c540c2799fbe13b3b421602b65160f960482e3af",
+      "executed_sha256": "65b03c14286f0df89bba6740c540c2799fbe13b3b421602b65160f960482e3af"
+    },
+    {
+      "path": "metaphor_backend/agents/module2_metaphor_generation/constants.py",
+      "original_sha256": "23bd8ba8299c98756fb9065e35950f11c00f619c0e282440fdf788e11d7bfe35",
+      "executed_sha256": "23bd8ba8299c98756fb9065e35950f11c00f619c0e282440fdf788e11d7bfe35"
+    },
+    {
+      "path": "metaphor_backend/agents/module2_metaphor_generation/feature_rewrite_agent.py",
+      "original_sha256": "c50fba5be4f0e6f1c72e63a9b4338d58e72a54e2cde9db3f3f217e16b6b5f887",
+      "executed_sha256": "440f72eae46a51e1c0ad8de2a438f1271030a63348006d02a1bbb6096033783f"
+    },
+    {
+      "path": "metaphor_backend/agents/module2_metaphor_generation/guided_metaphor_agent.py",
+      "original_sha256": "772f60fcae8f182c762e1fb1e9d721cfe6f3c05471201a004a1335131c51b5b9",
+      "executed_sha256": "772f60fcae8f182c762e1fb1e9d721cfe6f3c05471201a004a1335131c51b5b9"
+    },
+    {
+      "path": "metaphor_backend/agents/module2_metaphor_generation/module2_controller.py",
+      "original_sha256": "586642277d241e40edda1944b4ed97ec3c2dd345c9668da44a6c5f274a09a6f5",
+      "executed_sha256": "d3d25bfe4147a5a6959f5e8d6a9d72732a3ce94fbb46f17cd766deec91b31640"
+    },
+    {
+      "path": "metaphor_backend/agents/module2_metaphor_generation/variation_planner_agent.py",
+      "original_sha256": "dd64164fc7e36d282c902308d8651fdc6775bb714160fb29af797f895386b0e1",
+      "executed_sha256": "dd64164fc7e36d282c902308d8651fdc6775bb714160fb29af797f895386b0e1"
+    },
+    {
+      "path": "metaphor_backend/agents/module3_visualization_generation/__init__.py",
+      "original_sha256": "4d9413a6a32feb7b5f772353a7f6b138a078413b7e314ce8073a5f3e12d06332",
+      "executed_sha256": "4d9413a6a32feb7b5f772353a7f6b138a078413b7e314ce8073a5f3e12d06332"
+    },
+    {
+      "path": "metaphor_backend/agents/module3_visualization_generation/api_routes.py",
+      "original_sha256": "87b0725159c9d4acfa0276a56030251f7b6040f18e9b5824f9630e3ad2f1821b",
+      "executed_sha256": "87b0725159c9d4acfa0276a56030251f7b6040f18e9b5824f9630e3ad2f1821b"
+    },
+    {
+      "path": "metaphor_backend/agents/module3_visualization_generation/design_agent.py",
+      "original_sha256": "a7f0481dfce6aa0de9c2a2873c1f42b0d3613e7689ad2d739decf6da98e6f307",
+      "executed_sha256": "a7f0481dfce6aa0de9c2a2873c1f42b0d3613e7689ad2d739decf6da98e6f307"
+    },
+    {
+      "path": "metaphor_backend/agents/module3_visualization_generation/mapping_agent.py",
+      "original_sha256": "8d8f94f109a686233b9f69f17c5ba09f4cb0f96d24452dc1e1e9d0ea9e12ed61",
+      "executed_sha256": "8d8f94f109a686233b9f69f17c5ba09f4cb0f96d24452dc1e1e9d0ea9e12ed61"
+    },
+    {
+      "path": "metaphor_backend/agents/module3_visualization_generation/module3_controller.py",
+      "original_sha256": "05ccc64da993594085c14ec06f839ec12746332f420dd0e6d73e24a091e2a181",
+      "executed_sha256": "05ccc64da993594085c14ec06f839ec12746332f420dd0e6d73e24a091e2a181"
+    },
+    {
+      "path": "metaphor_backend/agents/module3_visualization_generation/unified_mapping_logic.py",
+      "original_sha256": "fbeda0af368965261257be731e72c61a41c2449ed2a1e15bbbe9f4fad5155529",
+      "executed_sha256": "fbeda0af368965261257be731e72c61a41c2449ed2a1e15bbbe9f4fad5155529"
+    },
+    {
+      "path": "metaphor_backend/config.py",
+      "original_sha256": "10283605397adabcec2bd13b290968a3e8617261dce7342ac0cdb2fb1fd92ba9",
+      "executed_sha256": "10283605397adabcec2bd13b290968a3e8617261dce7342ac0cdb2fb1fd92ba9"
+    },
+    {
+      "path": "metaphor_backend/config_lab.py",
+      "original_sha256": "ec9f3e7825fae106275fb64efeaceaf5fae691bcfc4ce06f1f7ca3da4e9e8a26",
+      "executed_sha256": "ec9f3e7825fae106275fb64efeaceaf5fae691bcfc4ce06f1f7ca3da4e9e8a26"
+    },
+    {
+      "path": "metaphor_backend/experiment/aliyun-oss/test_module2_integration.py",
+      "original_sha256": "6b05f8b3d1d50c37dc22bcac458709050399b05a1461ed181299fbe009762361",
+      "executed_sha256": "6b05f8b3d1d50c37dc22bcac458709050399b05a1461ed181299fbe009762361"
+    },
+    {
+      "path": "metaphor_backend/experiment/aliyun-oss/test_oss_upload.py",
+      "original_sha256": "7db6be77e77822cb92654e827b66e25ef35532183aa8b19cd12a7faf78d7401d",
+      "executed_sha256": "7db6be77e77822cb92654e827b66e25ef35532183aa8b19cd12a7faf78d7401d"
+    },
+    {
+      "path": "metaphor_backend/experiment/blind_variation/blind_variation_v1.py",
+      "original_sha256": "560add7a0a4e6512dd68ccde12326a171b213975df24658022f77b26dab6ec3c",
+      "executed_sha256": "560add7a0a4e6512dd68ccde12326a171b213975df24658022f77b26dab6ec3c"
+    },
+    {
+      "path": "metaphor_backend/experiment/blind_variation/blind_variation_v2.py",
+      "original_sha256": "69ae6e378f44bf25c20cb15561874cd26eda5e101169bf529c4ab24d7b001ba6",
+      "executed_sha256": "69ae6e378f44bf25c20cb15561874cd26eda5e101169bf529c4ab24d7b001ba6"
+    },
+    {
+      "path": "metaphor_backend/experiment/blind_variation/blind_variation_v3.py",
+      "original_sha256": "f91065df04eba803845538d65b76247aeac91d9d296d268459f203c2365503be",
+      "executed_sha256": "f91065df04eba803845538d65b76247aeac91d9d296d268459f203c2365503be"
+    },
+    {
+      "path": "metaphor_backend/experiment/blind_variation/blind_variation_v4.py",
+      "original_sha256": "4f66e0e81ca5c9d3a17201374592adb3de3500a1c183f323fee1c76948ee4e18",
+      "executed_sha256": "4f66e0e81ca5c9d3a17201374592adb3de3500a1c183f323fee1c76948ee4e18"
+    },
+    {
+      "path": "metaphor_backend/experiment/blind_variation/convert_fasttext_to_bin.py",
+      "original_sha256": "674c8e809b754818e63f8f261d84fa73d7a655ac5affad2b424abc4395f5547d",
+      "executed_sha256": "674c8e809b754818e63f8f261d84fa73d7a655ac5affad2b424abc4395f5547d"
+    },
+    {
+      "path": "metaphor_backend/experiment/blind_variation/demo.py",
+      "original_sha256": "1fd5a8a4b404a2726e185236dc8827828fd1f849d788fdf2a62a933298c03e77",
+      "executed_sha256": "1fd5a8a4b404a2726e185236dc8827828fd1f849d788fdf2a62a933298c03e77"
+    },
+    {
+      "path": "metaphor_backend/experiment/blind_variation/test_bin_integration_final.py",
+      "original_sha256": "d80bb8d3d7fe47551dc4dd681c2b0e5788374925b187555dc99f28d702948aa2",
+      "executed_sha256": "d80bb8d3d7fe47551dc4dd681c2b0e5788374925b187555dc99f28d702948aa2"
+    },
+    {
+      "path": "metaphor_backend/experiment/blind_variation/test_final_evaluation.py",
+      "original_sha256": "ae78058e600030ef0bc3472475141af6059476c191f2fade29575db2c30d77df",
+      "executed_sha256": "ae78058e600030ef0bc3472475141af6059476c191f2fade29575db2c30d77df"
+    },
+    {
+      "path": "metaphor_backend/experiment/blind_variation/test_optimized_blind_variation.py",
+      "original_sha256": "f2033041200b1bc00b530fedd5352fe6b9d871ce51558bd7528064e9c9ca6cdb",
+      "executed_sha256": "f2033041200b1bc00b530fedd5352fe6b9d871ce51558bd7528064e9c9ca6cdb"
+    },
+    {
+      "path": "metaphor_backend/experiment/blind_variation/test_optimized_performance.py",
+      "original_sha256": "fbe5b4f1d96277636e2be11c1246bad89bc631901fec07fb5cc840084d7a9957",
+      "executed_sha256": "fbe5b4f1d96277636e2be11c1246bad89bc631901fec07fb5cc840084d7a9957"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/agent/agent7_v1.py",
+      "original_sha256": "13cc8080d2cc9a788371b06827f16309091db40fc5663f8b6eabeb53b370df70",
+      "executed_sha256": "13cc8080d2cc9a788371b06827f16309091db40fc5663f8b6eabeb53b370df70"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/agent/agent7_v2.py",
+      "original_sha256": "ec9ca73bb45cb607156275e23d372f85db73970925d5875ed6e6165208a5e9c3",
+      "executed_sha256": "ec9ca73bb45cb607156275e23d372f85db73970925d5875ed6e6165208a5e9c3"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/agent/agent7_v3.py",
+      "original_sha256": "3c54b3f80fb89cfb2687fa1d037b6e21f4e18b7358f9310ea58f3ba4532fc0fc",
+      "executed_sha256": "3c54b3f80fb89cfb2687fa1d037b6e21f4e18b7358f9310ea58f3ba4532fc0fc"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/agent/agent7_v4.py",
+      "original_sha256": "28fb024b070916252e643a8254358f6406381c0532f949cc428a488e34bc29f8",
+      "executed_sha256": "28fb024b070916252e643a8254358f6406381c0532f949cc428a488e34bc29f8"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/agent/agent7_v5.py",
+      "original_sha256": "47fc72668373e98426700a204318ccfb126488245b526ffcd496b757d9f898f5",
+      "executed_sha256": "47fc72668373e98426700a204318ccfb126488245b526ffcd496b757d9f898f5"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/config.py",
+      "original_sha256": "fa82d9c8ec5aa6be8187647d432630c57cf823fe5152d2a9e4ee1004a154dbec",
+      "executed_sha256": "fa82d9c8ec5aa6be8187647d432630c57cf823fe5152d2a9e4ee1004a154dbec"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/image_generation/api_generator.py",
+      "original_sha256": "a2972dafac1479181d6453d81cc45c603cde99e9a7d817d80565a5550961e288",
+      "executed_sha256": "a2972dafac1479181d6453d81cc45c603cde99e9a7d817d80565a5550961e288"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/prompt0/v1_prompt0_builder.py",
+      "original_sha256": "b65736956c2bb37b8c402a87392323d19770eee86dd2cbdfd1b23fef3e556e22",
+      "executed_sha256": "b65736956c2bb37b8c402a87392323d19770eee86dd2cbdfd1b23fef3e556e22"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/prompt0/v2_prompt0_builder.py",
+      "original_sha256": "f302821b2e772b3321075bcd0b4a19ef1e15116f5be06c4e6ee11fc2921ca0dc",
+      "executed_sha256": "f302821b2e772b3321075bcd0b4a19ef1e15116f5be06c4e6ee11fc2921ca0dc"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/prompt0/v3_prompt0_builder.py",
+      "original_sha256": "1ee498c888de5d6fba2bac4bec070180b52b153d85514a4c51291e5a2ba6f9ec",
+      "executed_sha256": "1ee498c888de5d6fba2bac4bec070180b52b153d85514a4c51291e5a2ba6f9ec"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/prompt0/v4_prompt0_builder.py",
+      "original_sha256": "657b71fa85835a7fff9e8f42890a8756c75735e1e27413bcfb37c4e80a570a9f",
+      "executed_sha256": "657b71fa85835a7fff9e8f42890a8756c75735e1e27413bcfb37c4e80a570a9f"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/prompt0/v5_prompt0_builder.py",
+      "original_sha256": "eac469cbf6665a3a93c330776b43e3effe91bdca941bc6619bd4073b9c712bec",
+      "executed_sha256": "eac469cbf6665a3a93c330776b43e3effe91bdca941bc6619bd4073b9c712bec"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/scripts/run_agent7_v1.py",
+      "original_sha256": "5fe224aaaca47cb701032eacfee3f87a51b0809b6bd1aefcedb20b8e53fef010",
+      "executed_sha256": "5fe224aaaca47cb701032eacfee3f87a51b0809b6bd1aefcedb20b8e53fef010"
+    },
+    {
+      "path": "metaphor_backend/experiment/design_agent7_prompt/test_agent7_prompt.py",
+      "original_sha256": "f127580731f5894473091c322f665423223639a310e3eca9cb81456b22988279",
+      "executed_sha256": "f127580731f5894473091c322f665423223639a310e3eca9cb81456b22988279"
+    },
+    {
+      "path": "metaphor_backend/experiment/generate_image/load_env.py",
+      "original_sha256": "6a45b20c7e56cebd0c8610baaa3e30051b88cd3090b4f7d9c2d555cc5cdbdb62",
+      "executed_sha256": "6a45b20c7e56cebd0c8610baaa3e30051b88cd3090b4f7d9c2d555cc5cdbdb62"
+    },
+    {
+      "path": "metaphor_backend/experiment/generate_image/test_config.py",
+      "original_sha256": "1165b18de8cf610d913c42734e4a0bb8c7b7859be13658e32794626000fdee2c",
+      "executed_sha256": "1165b18de8cf610d913c42734e4a0bb8c7b7859be13658e32794626000fdee2c"
+    },
+    {
+      "path": "metaphor_backend/experiment/generate_image/test_image_generation.py",
+      "original_sha256": "eaace9ab531f04fbc709a2a1ddb0b37ac8824ad270c38bbb38c026b974f04870",
+      "executed_sha256": "eaace9ab531f04fbc709a2a1ddb0b37ac8824ad270c38bbb38c026b974f04870"
+    },
+    {
+      "path": "metaphor_backend/logging_config.py",
+      "original_sha256": "cc45c6a1beb06d2ce2641e02c0233d6b1351f0fad9f704ee1f947c3e510b3f1b",
+      "executed_sha256": "cc45c6a1beb06d2ce2641e02c0233d6b1351f0fad9f704ee1f947c3e510b3f1b"
+    },
+    {
+      "path": "metaphor_backend/main.py",
+      "original_sha256": "fd0845f4c0fd8063bc6005956810a2fd90843d6f7bcecd54bc7e4483bd6e4530",
+      "executed_sha256": "fd0845f4c0fd8063bc6005956810a2fd90843d6f7bcecd54bc7e4483bd6e4530"
+    },
+    {
+      "path": "metaphor_backend/models/__init__.py",
+      "original_sha256": "0a2e7c5bb0a8125fde661a7d7631a0dbb0ed9c80304848d6ba431f1f7f94befd",
+      "executed_sha256": "0a2e7c5bb0a8125fde661a7d7631a0dbb0ed9c80304848d6ba431f1f7f94befd"
+    },
+    {
+      "path": "metaphor_backend/models/common.py",
+      "original_sha256": "d05600c0e79ceff2ba47666de18c3af0a6a4c0a03399d74ee9fad6c327835c9a",
+      "executed_sha256": "d05600c0e79ceff2ba47666de18c3af0a6a4c0a03399d74ee9fad6c327835c9a"
+    },
+    {
+      "path": "metaphor_backend/start.py",
+      "original_sha256": "1078703878edf5511ca9fe085a08c83fa1b6cc4d2383a9595611dee9fea58aa2",
+      "executed_sha256": "1078703878edf5511ca9fe085a08c83fa1b6cc4d2383a9595611dee9fea58aa2"
+    },
+    {
+      "path": "metaphor_backend/start_lab.py",
+      "original_sha256": "f3aa9c5883c83ba30ce21048f441dc7e9a0aea759a7f5fd47413e90ce1ca6202",
+      "executed_sha256": "f3aa9c5883c83ba30ce21048f441dc7e9a0aea759a7f5fd47413e90ce1ca6202"
+    },
+    {
+      "path": "metaphor_backend/test_api_format.py",
+      "original_sha256": "7269feeb9a0aafddc5dd3eb531299684fca998c1dde2ee1af202036f60772c0c",
+      "executed_sha256": "7269feeb9a0aafddc5dd3eb531299684fca998c1dde2ee1af202036f60772c0c"
+    },
+    {
+      "path": "metaphor_backend/test_blind_metaphor_integration.py",
+      "original_sha256": "97cef49f2fb926ad629554c4c37d8bb509320932e185f54f0566efeb26e696a6",
+      "executed_sha256": "97cef49f2fb926ad629554c4c37d8bb509320932e185f54f0566efeb26e696a6"
+    },
+    {
+      "path": "metaphor_backend/test_config.py",
+      "original_sha256": "ff3b174391622c33b0e57cb43dfb9837291fdbc5a6dd11c998349a24a7b7272e",
+      "executed_sha256": "ff3b174391622c33b0e57cb43dfb9837291fdbc5a6dd11c998349a24a7b7272e"
+    },
+    {
+      "path": "metaphor_backend/test_guided_variation.py",
+      "original_sha256": "54ddc7a7c34738b00c21627397bcbcef1f6eca5278e28d6cb9c1bcf11615f96f",
+      "executed_sha256": "54ddc7a7c34738b00c21627397bcbcef1f6eca5278e28d6cb9c1bcf11615f96f"
+    },
+    {
+      "path": "metaphor_backend/test_guided_variation_mock.py",
+      "original_sha256": "c22a87e109d58c21e27a1948be9d7bd47c6f1ad87bde5e5b58ff18e9ae8ed68e",
+      "executed_sha256": "c22a87e109d58c21e27a1948be9d7bd47c6f1ad87bde5e5b58ff18e9ae8ed68e"
+    },
+    {
+      "path": "metaphor_backend/test_langchain_setup.py",
+      "original_sha256": "b6059194d97b77c246a9b25c484088d45fa147973dd4a48e8a28f8d220ef2cf6",
+      "executed_sha256": "b6059194d97b77c246a9b25c484088d45fa147973dd4a48e8a28f8d220ef2cf6"
+    },
+    {
+      "path": "metaphor_backend/test_module3.py",
+      "original_sha256": "ad26ad7d4d10d077dddc1173033ad887cda70f7e6fcda332d4eb959863a9a5a0",
+      "executed_sha256": "ad26ad7d4d10d077dddc1173033ad887cda70f7e6fcda332d4eb959863a9a5a0"
+    },
+    {
+      "path": "metaphor_backend/utils/__init__.py",
+      "original_sha256": "a2e914d2e7eba0f45df3f37c776c6215eb3d093c526b0e0d03aa769d2d649128",
+      "executed_sha256": "a2e914d2e7eba0f45df3f37c776c6215eb3d093c526b0e0d03aa769d2d649128"
+    },
+    {
+      "path": "metaphor_backend/utils/cache_utils.py",
+      "original_sha256": "592b5a3646e90e34278e32b8461aa0e8c6e0d71898ac54736c6ff9459be22656",
+      "executed_sha256": "592b5a3646e90e34278e32b8461aa0e8c6e0d71898ac54736c6ff9459be22656"
+    },
+    {
+      "path": "metaphor_backend/utils/langchain_utils.py",
+      "original_sha256": "b094334005fee7c84a373563506bc208fb1dc98972d604261303887aa3fa0f0b",
+      "executed_sha256": "b094334005fee7c84a373563506bc208fb1dc98972d604261303887aa3fa0f0b"
+    }
+  ]
+}

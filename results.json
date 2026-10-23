@@ -1,0 +1,2660 @@
+{
+  "status": "complete",
+  "repository_commit": "aafc7cda61b9fcb47d1536dbfad664c10352431e",
+  "model": "current Codex conversation via recorded file bridge",
+  "image_model": "Codex built-in imagegen; actual underlying model ID not exposed",
+  "budget_matched": false,
+  "independent_contexts": false,
+  "repeats": 1,
+  "settings": {
+    "totalLimit": 6,
+    "blindRatio": 0.4,
+    "ENABLE_THEME_BALANCE": true,
+    "SKIP_IMAGE_GEN": true
+  },
+  "examples": [
+    {
+      "name": "city_population",
+      "synthetic": true,
+      "records": [
+        {
+          "city": "Beijing",
+          "population": 2154,
+          "birth_rate": 8.5,
+          "urbanization_rate": 86.5
+        },
+        {
+          "city": "Shanghai",
+          "population": 2428,
+          "birth_rate": 7.8,
+          "urbanization_rate": 88.1
+        },
+        {
+          "city": "Guangzhou",
+          "population": 1530,
+          "birth_rate": 9.2,
+          "urbanization_rate": 82.3
+        },
+        {
+          "city": "Shenzhen",
+          "population": 1344,
+          "birth_rate": 8.9,
+          "urbanization_rate": 100.0
+        },
+        {
+          "city": "Hangzhou",
+          "population": 1194,
+          "birth_rate": 8.1,
+          "urbanization_rate": 78.9
+        }
+      ],
+      "arms": {
+        "direct": {
+          "candidates": [
+            {
+              "keyword": "forest",
+              "reason": "Established canopy mass and new buds distinguish existing residents from renewal.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "tree canopy",
+                  "channel": "area"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "bud",
+                  "channel": "lightness"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled Urban Forests. Show exactly five separate trees, one labeled for each source city. Scale canopy area in direct proportion to population, preserving a common tree silhouette. Place one identical-size bud on each tree; map birth rate to bud lightness with a single dark-to-light sequential scale, higher rates lighter. Keep trunk height and bud count constant. Label each city with its population and birth rate. Include separate canopy-area and bud-lightness legends. Convey the contrast between population scale and renewal without asserting a universal inverse relationship. Do not encode urbanization or invent data.",
+              "id": "city_population_direct_01",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/city_population_direct_01.webp",
+              "render_prompt": "Create an editorial infographic titled Urban Forests. Show exactly five separate trees, one labeled for each source city. Scale canopy area in direct proportion to population, preserving a common tree silhouette. Place one identical-size bud on each tree; map birth rate to bud lightness with a single dark-to-light sequential scale, higher rates lighter. Keep trunk height and bud count constant. Label each city with its population and birth rate. Include separate canopy-area and bud-lightness legends. Convey the contrast between population scale and renewal without asserting a universal inverse relationship. Do not encode urbanization or invent data.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城名称和人口、出生率标签与输入一致。树干随整棵树缩放，芽的尺寸也有变化，未严格保持只改变树冠面积和芽明度的约束；面积比例未测量。"
+              }
+            },
+            {
+              "keyword": "hive",
+              "reason": "A city's existing population and its renewal can be represented by a cell and its brood.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "honeycomb cell",
+                  "channel": "area"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "brood egg",
+                  "channel": "lightness"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled Cities in the Hive. Show exactly five labeled hexagonal honeycomb data cells, one per source city. Cell area represents population on one shared scale. Each cell contains exactly one same-size egg; higher birth rate makes the egg lighter on a calibrated ochre-to-ivory scale. Keep cell backgrounds equally light so egg tones can be compared. Print population and birth-rate values next to all five labels. Add clear, separate legends. Retain organic wax contours without extra data cells or invented cities. Urbanization is not encoded.",
+              "id": "city_population_direct_02",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/city_population_direct_02.webp",
+              "render_prompt": "Create an editorial infographic titled Cities in the Hive. Show exactly five labeled hexagonal honeycomb data cells, one per source city. Cell area represents population on one shared scale. Each cell contains exactly one same-size egg; higher birth rate makes the egg lighter on a calibrated ochre-to-ivory scale. Keep cell backgrounds equally light so egg tones can be compared. Print population and birth-rate values next to all five labels. Add clear, separate legends. Retain organic wax contours without extra data cells or invented cities. Urbanization is not encoded.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城与数值标签一致，蜂巢隐喻容易辨认。但卵随蜂房尺寸变化，违反卵应等大的约束，可能让出生率与人口产生额外视觉混淆。"
+              }
+            },
+            {
+              "keyword": "reservoir",
+              "reason": "A reservoir separates accumulated population from the replenishment rate without requiring a growth claim.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "reservoir water surface",
+                  "channel": "area"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "inlet stream",
+                  "channel": "width"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled Reservoirs of Urban Life. Arrange five top-view reservoirs, one per city, each with a single incoming stream. Reservoir water-surface area is proportional to population; inlet width is proportional to birth rate using a shared width scale. State in the legend that the inlet represents birth rate, not net population change. Keep water color and stream length constant. Label every reservoir with its city, population, and birth rate. Add area and width legends. Use only the supplied records, no extra reservoirs, and no urbanization encoding.",
+              "id": "city_population_direct_03",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/city_population_direct_03.webp",
+              "render_prompt": "Create an editorial infographic titled Reservoirs of Urban Life. Arrange five top-view reservoirs, one per city, each with a single incoming stream. Reservoir water-surface area is proportional to population; inlet width is proportional to birth rate using a shared width scale. State in the legend that the inlet represents birth rate, not net population change. Keep water color and stream length constant. Label every reservoir with its city, population, and birth rate. Add area and width legends. Use only the supplied records, no extra reservoirs, and no urbanization encoding.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城与数值标签一致。蓄水面积与入流宽度的概念区分清楚；入流宽度差异较小，仍需检查是否遵守同一比例尺度。图例的参考刻度不是额外数据记录。"
+              }
+            },
+            {
+              "keyword": "clock",
+              "reason": "Dial scale and a calibrated pointer place population and renewal on distinct visual attributes.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "clock dial",
+                  "channel": "area"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "single pointer",
+                  "channel": "orientation"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled The Rhythm of Cities. Show five single-pointer clock-like dials with clearly labeled city names. Dial area is proportional to population. Each pointer uses the same birth-rate calibration from 7.5 to 9.5, spanning a labeled semicircular arc; higher birth rates rotate farther clockwise. This is a birth-rate gauge, not a time-of-day display. Keep pointer thickness and relative length consistent. Print the two actual data values for every city and add an area legend plus the common pointer calibration. No causal or urbanization claims.",
+              "id": "city_population_direct_04",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/city_population_direct_04.webp",
+              "render_prompt": "Create an editorial infographic titled The Rhythm of Cities. Show five single-pointer clock-like dials with clearly labeled city names. Dial area is proportional to population. Each pointer uses the same birth-rate calibration from 7.5 to 9.5, spanning a labeled semicircular arc; higher birth rates rotate farther clockwise. This is a birth-rate gauge, not a time-of-day display. Keep pointer thickness and relative length consistent. Print the two actual data values for every city and add an area legend plus the common pointer calibration. No causal or urbanization claims.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城数值一致，共用出生率半圆刻度和指针便于读取。图像更接近仪表盘而非明确时钟隐喻；表盘面积是否严格按人口缩放尚未测量。"
+              }
+            },
+            {
+              "keyword": "coral",
+              "reason": "A coral colony combines existing collective scale with visible growing tips.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "coral colony silhouette",
+                  "channel": "area"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "growth tip",
+                  "channel": "lightness"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled Urban Reefs. Display exactly five coral colony silhouettes labeled with the source cities. Colony area is proportional to population. Put one same-sized marked growth tip on each colony, with lightness increasing with birth rate on one shared sequential scale. Keep branch complexity and background tone comparable rather than encoding additional values. Print each city's population and birth rate, and include separate area and tip-lightness legends. Treat the coral as a metaphor for scale and renewal, not a causal explanation. Do not add cities or encode urbanization.",
+              "id": "city_population_direct_05",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/city_population_direct_05.webp",
+              "render_prompt": "Create an editorial infographic titled Urban Reefs. Display exactly five coral colony silhouettes labeled with the source cities. Colony area is proportional to population. Put one same-sized marked growth tip on each colony, with lightness increasing with birth rate on one shared sequential scale. Keep branch complexity and background tone comparable rather than encoding additional values. Print each city's population and birth rate, and include separate area and tip-lightness legends. Treat the coral as a metaphor for scale and renewal, not a causal explanation. Do not add cities or encode urbanization.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城标签与数值一致，更新部位被标成单独的生长尖端。珊瑚分支形态和整体色调也随城市变化，增加了未经指定的差异；面积与明度精度未测量。"
+              }
+            },
+            {
+              "keyword": "loom",
+              "reason": "Woven material and incoming thread distinguish accumulated social fabric from renewal.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "woven fabric panel",
+                  "channel": "area"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "incoming thread bundle",
+                  "channel": "width"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled The Fabric of Cities. Arrange five small looms, one per source city. The visible woven panel area represents population; the width of one incoming thread bundle represents birth rate using one shared scale. Keep loom frame size, thread color, and panel aspect ratio constant, varying only panel area and incoming bundle width. Label all cities with their population and birth-rate values. Include two legends and a note that incoming threads encode births, not migration or net growth. Use the actual source records and do not encode urbanization.",
+              "id": "city_population_direct_06",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/city_population_direct_06.webp",
+              "render_prompt": "Create an editorial infographic titled The Fabric of Cities. Arrange five small looms, one per source city. The visible woven panel area represents population; the width of one incoming thread bundle represents birth rate using one shared scale. Keep loom frame size, thread color, and panel aspect ratio constant, varying only panel area and incoming bundle width. Label all cities with their population and birth-rate values. Include two legends and a note that incoming threads encode births, not migration or net growth. Use the actual source records and do not encode urbanization.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城标签与数值一致。织物面积和输入线束宽度都有图例，但织物长宽比未保持恒定，线束的细微宽度差异也不易目测比较。"
+              }
+            }
+          ]
+        },
+        "repository": {
+          "candidates": [
+            {
+              "id": "city_population_repository_01",
+              "keyword": "archipelago",
+              "origin": "blind",
+              "repository_method_label": "blind",
+              "theme": "Nature",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_d05d27e0",
+                "keyword": "archipelago",
+                "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+                "contextDescription": "Five cities are compared by population, birth rate, and urbanization rate.",
+                "defaultPlan": [
+                  {
+                    "dataField": "population",
+                    "subitemId": "sub_01",
+                    "subitemName": "Island",
+                    "channels": [
+                      "size"
+                    ]
+                  },
+                  {
+                    "dataField": "birth_rate",
+                    "subitemId": "sub_04",
+                    "subitemName": "Islet",
+                    "channels": [
+                      "lightness"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "population",
+                  "subitemOptions": [
+                    {
+                      "name": "Island",
+                      "geometry": "area",
+                      "description": "The principal landmass of each island.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Shoreline",
+                      "geometry": "line",
+                      "description": "The boundary between land and water.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Lagoon",
+                      "geometry": "area",
+                      "description": "An enclosed water region within an island.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Islet",
+                      "geometry": "point",
+                      "description": "A small secondary island beside a principal landmass.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "birth_rate",
+                  "subitemOptions": [
+                    {
+                      "name": "Island",
+                      "geometry": "area",
+                      "description": "The principal landmass of each island.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Shoreline",
+                      "geometry": "line",
+                      "description": "The boundary between land and water.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Lagoon",
+                      "geometry": "area",
+                      "description": "An enclosed water region within an island.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Islet",
+                      "geometry": "point",
+                      "description": "A small secondary island beside a principal landmass.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "lightness"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Use principal island area for population and equal-sized islet lightness for birth rate, with separate legends."
+              },
+              "image_prompt": "Create a magazine-quality editorial infographic titled An Archipelago of Cities. Use an archipelago as the actual data structure: one principal Island for each source city, plus one small Islet beside each principal island. Encode population through principal island area, using one proportional scale and similar island silhouettes. Encode birth_rate through the lightness of the companion Islet on one sequential dark-to-light scale, higher rates lighter. All companion islets must have equal area so their size does not encode birth rate. Keep sea tone and coastline treatment consistent, with enough separation to identify each city-island pair. Label every pair with the city and its two supplied values. Include separate island-area and islet-lightness legends. Shanghai and Beijing may appear as larger landmasses with comparatively darker companion islets, but preserve all exceptions in the actual table. Do not infer geography or causal relationships. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of sand, muted teal, slate and ivory, and Clean composition with purposeful detail. Use only supplied entities and data, with no additional decorative islands mistaken for data.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "Island",
+                  "channel": "size"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "Islet",
+                  "channel": "lightness"
+                }
+              ],
+              "image_path": "assets/city_population_repository_01.webp",
+              "render_prompt": "Create a magazine-quality editorial infographic titled An Archipelago of Cities. Use an archipelago as the actual data structure: one principal Island for each source city, plus one small Islet beside each principal island. Encode population through principal island area, using one proportional scale and similar island silhouettes. Encode birth_rate through the lightness of the companion Islet on one sequential dark-to-light scale, higher rates lighter. All companion islets must have equal area so their size does not encode birth rate. Keep sea tone and coastline treatment consistent, with enough separation to identify each city-island pair. Label every pair with the city and its two supplied values. Include separate island-area and islet-lightness legends. Shanghai and Beijing may appear as larger landmasses with comparatively darker companion islets, but preserve all exceptions in the actual table. Do not infer geography or causal relationships. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of sand, muted teal, slate and ivory, and Clean composition with purposeful detail. Use only supplied entities and data, with no additional decorative islands mistaken for data.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城名称和数值标签一致。上海岛屿相对北京显得明显更大，面积比例尚未测量；小岛明度差异较接近，未校准。山峰等装饰增加了额外差异。"
+              }
+            },
+            {
+              "id": "city_population_repository_02",
+              "keyword": "reservoir",
+              "origin": "blind",
+              "repository_method_label": "blind",
+              "theme": "Artifact",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_fe5b4a53",
+                "keyword": "reservoir",
+                "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+                "contextDescription": "Five cities are compared by population, birth rate, and urbanization rate.",
+                "defaultPlan": [
+                  {
+                    "dataField": "population",
+                    "subitemId": "sub_01",
+                    "subitemName": "Water body",
+                    "channels": [
+                      "size"
+                    ]
+                  },
+                  {
+                    "dataField": "birth_rate",
+                    "subitemId": "sub_02",
+                    "subitemName": "Inlet",
+                    "channels": [
+                      "size"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "population",
+                  "subitemOptions": [
+                    {
+                      "name": "Water body",
+                      "geometry": "area",
+                      "description": "The stored surface of water inside the reservoir.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Inlet",
+                      "geometry": "line",
+                      "description": "A stream supplying the reservoir.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Dam",
+                      "geometry": "line",
+                      "description": "The retaining boundary.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Outlet gate",
+                      "geometry": "point",
+                      "description": "A localized release control.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "birth_rate",
+                  "subitemOptions": [
+                    {
+                      "name": "Water body",
+                      "geometry": "area",
+                      "description": "The stored surface of water inside the reservoir.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Inlet",
+                      "geometry": "line",
+                      "description": "A stream supplying the reservoir.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Dam",
+                      "geometry": "line",
+                      "description": "The retaining boundary.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Outlet gate",
+                      "geometry": "point",
+                      "description": "A localized release control.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Separate accumulated stock from renewal rate using water-body area and inlet width, with explicit units-free labels."
+              },
+              "image_prompt": "Create a magazine-quality infographic titled Reservoirs of Urban Life, showing one recognizable reservoir for each city. Use the Water body surface area to encode population on a common proportional scale. Use the Inlet stream width to encode birth_rate on a second common scale. Keep inlet length, water hue, and dam styling constant, so the two size channels belong to clearly different components. Label each reservoir with its city name and actual population and birth-rate values. Include an area key for stored population and a width key for birth rate. Use a top-down or shallow axonometric view with clean separation between all five reservoirs. Describe the inlet as birth rate, not migration or net population growth; the metaphor must not imply a causal claim. Preserve the actual comparison pattern and its exceptions when the source records are supplied. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted blue-green water and warm stone, and Clean composition with purposeful detail. Avoid extra cities, decorative reservoirs, unsupported units, and any urbanization encoding.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "Water body",
+                  "channel": "size"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "Inlet",
+                  "channel": "size"
+                }
+              ],
+              "image_path": "assets/city_population_repository_02.webp",
+              "render_prompt": "Create a magazine-quality infographic titled Reservoirs of Urban Life, showing one recognizable reservoir for each city. Use the Water body surface area to encode population on a common proportional scale. Use the Inlet stream width to encode birth_rate on a second common scale. Keep inlet length, water hue, and dam styling constant, so the two size channels belong to clearly different components. Label each reservoir with its city name and actual population and birth-rate values. Include an area key for stored population and a width key for birth rate. Use a top-down or shallow axonometric view with clean separation between all five reservoirs. Describe the inlet as birth rate, not migration or net population growth; the metaphor must not imply a causal claim. Preserve the actual comparison pattern and its exceptions when the source records are supplied. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted blue-green water and warm stone, and Clean composition with purposeful detail. Avoid extra cities, decorative reservoirs, unsupported units, and any urbanization encoding.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城数值一致，水面存量与入口宽度可区分。堤坝、出口和景观较复杂，可能引入未编码流量的联想；面积及入口宽度未作严格测量。"
+              }
+            },
+            {
+              "id": "city_population_repository_03",
+              "keyword": "heart",
+              "origin": "theme_fill",
+              "repository_method_label": "blind",
+              "theme": "Body",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_30fcfd33",
+                "keyword": "heart",
+                "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+                "contextDescription": "Five cities are compared by population, birth rate, and urbanization rate.",
+                "defaultPlan": [
+                  {
+                    "dataField": "population",
+                    "subitemId": "sub_01",
+                    "subitemName": "Ventricle",
+                    "channels": [
+                      "size"
+                    ]
+                  },
+                  {
+                    "dataField": "birth_rate",
+                    "subitemId": "sub_02",
+                    "subitemName": "Aorta",
+                    "channels": [
+                      "size"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "population",
+                  "subitemOptions": [
+                    {
+                      "name": "Ventricle",
+                      "geometry": "area",
+                      "description": "A main pumping chamber with a recognizable rounded interior.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Aorta",
+                      "geometry": "line",
+                      "description": "The main vessel leaving the heart.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Valve",
+                      "geometry": "point",
+                      "description": "A localized gateway between chambers.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Heart wall",
+                      "geometry": "area",
+                      "description": "The muscular enclosing surface.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "birth_rate",
+                  "subitemOptions": [
+                    {
+                      "name": "Ventricle",
+                      "geometry": "area",
+                      "description": "A main pumping chamber with a recognizable rounded interior.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Aorta",
+                      "geometry": "line",
+                      "description": "The main vessel leaving the heart.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Valve",
+                      "geometry": "point",
+                      "description": "A localized gateway between chambers.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Heart wall",
+                      "geometry": "area",
+                      "description": "The muscular enclosing surface.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Use chamber area and vessel width as symbolic stock and renewal encodings; explicitly avoid interpreting birth rate as a measured heart function."
+              },
+              "image_prompt": "Create an editorial infographic titled The Urban Heartbeat. Show five elegant anatomical heart cutaways, one per source city, with recognizable chambers and vessels. Encode population through the visible Ventricle area using one proportional scale. Encode birth_rate through Aorta width using another common scale. Keep the remaining heart anatomy stylistically consistent and avoid varying the whole heart size independently of its chamber encoding. Clearly label both mapped parts and print each city's population and birth rate. Add an area key and a vessel-width key. Explain that these are symbolic demographic encodings, not medical measurements or a claim that a larger heart causes a lower birth rate. Preserve all supplied differences and exceptions. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted terracotta, rose, slate and cream, and Clean composition with purposeful detail. Give the five specimens ample whitespace and avoid clinical photorealism, blood, extra cities, invented values, and unsupported urbanization mappings.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "Ventricle",
+                  "channel": "size"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "Aorta",
+                  "channel": "size"
+                }
+              ],
+              "image_path": "assets/city_population_repository_03.webp",
+              "render_prompt": "Create an editorial infographic titled The Urban Heartbeat. Show five elegant anatomical heart cutaways, one per source city, with recognizable chambers and vessels. Encode population through the visible Ventricle area using one proportional scale. Encode birth_rate through Aorta width using another common scale. Keep the remaining heart anatomy stylistically consistent and avoid varying the whole heart size independently of its chamber encoding. Clearly label both mapped parts and print each city's population and birth rate. Add an area key and a vessel-width key. Explain that these are symbolic demographic encodings, not medical measurements or a claim that a larger heart causes a lower birth rate. Preserve all supplied differences and exceptions. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted terracotta, rose, slate and cream, and Clean composition with purposeful detail. Give the five specimens ample whitespace and avoid clinical photorealism, blood, extra cities, invented values, and unsupported urbanization mappings.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城与数值一致。心室面积及主动脉宽度的变化较细微，器官结构使比较更复杂；这里是示意隐喻，未验证解剖准确性与几何比例。"
+              }
+            },
+            {
+              "id": "city_population_repository_04",
+              "keyword": "colony",
+              "origin": "guided",
+              "repository_method_label": "guided",
+              "theme": "Life",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_587be4e5",
+                "keyword": "colony",
+                "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+                "contextDescription": "Five cities are compared by population, birth rate, and urbanization rate.",
+                "defaultPlan": [
+                  {
+                    "dataField": "population",
+                    "subitemId": "sub_01",
+                    "subitemName": "Nest chamber",
+                    "channels": [
+                      "size"
+                    ]
+                  },
+                  {
+                    "dataField": "birth_rate",
+                    "subitemId": "sub_02",
+                    "subitemName": "Brood chamber",
+                    "channels": [
+                      "lightness"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "population",
+                  "subitemOptions": [
+                    {
+                      "name": "Nest chamber",
+                      "geometry": "area",
+                      "description": "A visible chamber housing an ant colony.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Brood chamber",
+                      "geometry": "area",
+                      "description": "A chamber containing immature members.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Tunnel",
+                      "geometry": "line",
+                      "description": "A route linking the chambers.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Ant",
+                      "geometry": "point",
+                      "description": "A recognizable adult member of the colony.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "birth_rate",
+                  "subitemOptions": [
+                    {
+                      "name": "Nest chamber",
+                      "geometry": "area",
+                      "description": "A visible chamber housing an ant colony.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Brood chamber",
+                      "geometry": "area",
+                      "description": "A chamber containing immature members.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Tunnel",
+                      "geometry": "line",
+                      "description": "A route linking the chambers.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Ant",
+                      "geometry": "point",
+                      "description": "A recognizable adult member of the colony.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "lightness"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Use nest chamber area for population and constant-area brood chamber lightness for birth rate, while ant counts remain decorative and constant."
+              },
+              "image_prompt": "Create a refined editorial infographic titled Cities Below the Surface. Show five clearly separated ant-colony cutaways, each labeled with a source city. Encode population with the area of the main Nest chamber, using a common proportional area scale. Beside it place one constant-area Brood chamber whose lightness encodes birth_rate: higher rates lighter, lower rates darker on one ochre sequential scale. Keep tunnel lengths, decorative ant counts, and brood chamber sizes constant so they do not suggest other quantities. Label both data values for every city and include separate chamber-area and brood-lightness legends. Make the contrast between established population and renewal visually legible, preserving the source data's exceptions rather than asserting a universal inverse law. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of warm earth, pale ochre and cream, and Clean composition with purposeful detail. The colony anatomy should remain recognizable but elegantly simplified. Avoid extra data colonies, invented measurements, medical or biological causal claims, and unsupported urbanization encodings.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "Nest chamber",
+                  "channel": "size"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "Brood chamber",
+                  "channel": "lightness"
+                }
+              ],
+              "image_path": "assets/city_population_repository_04.webp",
+              "render_prompt": "Create a refined editorial infographic titled Cities Below the Surface. Show five clearly separated ant-colony cutaways, each labeled with a source city. Encode population with the area of the main Nest chamber, using a common proportional area scale. Beside it place one constant-area Brood chamber whose lightness encodes birth_rate: higher rates lighter, lower rates darker on one ochre sequential scale. Keep tunnel lengths, decorative ant counts, and brood chamber sizes constant so they do not suggest other quantities. Label both data values for every city and include separate chamber-area and brood-lightness legends. Make the contrast between established population and renewal visually legible, preserving the source data's exceptions rather than asserting a universal inverse law. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of warm earth, pale ochre and cream, and Clean composition with purposeful detail. The colony anatomy should remain recognizable but elegantly simplified. Avoid extra data colonies, invented measurements, medical or biological causal claims, and unsupported urbanization encodings.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城数值一致，蚁巢与育幼室在概念上可区分。但装饰中的卵和蚂蚁数量随城市变化，育幼室大小也略有变化，未严格保持非编码属性恒定。"
+              }
+            },
+            {
+              "id": "city_population_repository_05",
+              "keyword": "journey",
+              "origin": "theme_fill",
+              "repository_method_label": "blind",
+              "theme": "Others",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_5595f1d0",
+                "keyword": "journey",
+                "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+                "contextDescription": "Five cities are compared by population, birth rate, and urbanization rate.",
+                "defaultPlan": [
+                  {
+                    "dataField": "population",
+                    "subitemId": "sub_01",
+                    "subitemName": "Caravan",
+                    "channels": [
+                      "size"
+                    ]
+                  },
+                  {
+                    "dataField": "birth_rate",
+                    "subitemId": "sub_02",
+                    "subitemName": "Trail",
+                    "channels": [
+                      "size"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "population",
+                  "subitemOptions": [
+                    {
+                      "name": "Caravan",
+                      "geometry": "area",
+                      "description": "A recognizable group traveling together.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Trail",
+                      "geometry": "line",
+                      "description": "The route followed by the traveling group.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Waypoint",
+                      "geometry": "point",
+                      "description": "A labeled stop along the route.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Travel pack",
+                      "geometry": "area",
+                      "description": "The carried equipment associated with the journey.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "birth_rate",
+                  "subitemOptions": [
+                    {
+                      "name": "Caravan",
+                      "geometry": "area",
+                      "description": "A recognizable group traveling together.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Trail",
+                      "geometry": "line",
+                      "description": "The route followed by the traveling group.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Waypoint",
+                      "geometry": "point",
+                      "description": "A labeled stop along the route.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Travel pack",
+                      "geometry": "area",
+                      "description": "The carried equipment associated with the journey.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Use caravan silhouette area and trail width with explicit legends; the metaphor is a collective journey, not a geographic migration claim."
+              },
+              "image_prompt": "Create a magazine-quality editorial infographic titled The Collective Journey. Arrange five separate caravan-and-trail vignettes, one for each source city. Encode population with the total visible area of the Caravan silhouette using a shared proportional scale. Use a consistent repeated caravan composition rather than changing traveler counts. Encode birth_rate with Trail width on a common width scale; trail length and direction remain constant. Keep the five journeys spatially distinct and clearly label every city with its actual population and birth rate. Include an area legend for the caravan and a width legend for the trail. State that this is a symbolic population-and-renewal comparison, not migration data, transport traffic, or a historical journey. Preserve the source table's individual differences and do not claim a universal inverse relationship. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted blue, earthy ochre and ivory, and Clean composition with purposeful detail. Avoid maps, invented destinations, extra cities, unsupported years, and urbanization encodings.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "Caravan",
+                  "channel": "size"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "Trail",
+                  "channel": "size"
+                }
+              ],
+              "image_path": "assets/city_population_repository_05.webp",
+              "render_prompt": "Create a magazine-quality editorial infographic titled The Collective Journey. Arrange five separate caravan-and-trail vignettes, one for each source city. Encode population with the total visible area of the Caravan silhouette using a shared proportional scale. Use a consistent repeated caravan composition rather than changing traveler counts. Encode birth_rate with Trail width on a common width scale; trail length and direction remain constant. Keep the five journeys spatially distinct and clearly label every city with its actual population and birth rate. Include an area legend for the caravan and a width legend for the trail. State that this is a symbolic population-and-renewal comparison, not migration data, transport traffic, or a historical journey. Preserve the source table's individual differences and do not claim a universal inverse relationship. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted blue, earthy ochre and ivory, and Clean composition with purposeful detail. Avoid maps, invented destinations, extra cities, unsupported years, and urbanization encodings.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城数值一致。商队中的骆驼数量和构成随城市变化，违反构成恒定的约束；道路宽度也不易比较。旅程仍可能让读者联想到迁移而非出生率。"
+              }
+            },
+            {
+              "id": "city_population_repository_06",
+              "keyword": "forest",
+              "origin": "guided",
+              "repository_method_label": "guided",
+              "theme": "Nature",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_7ec9f738",
+                "keyword": "forest",
+                "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+                "contextDescription": "Five cities are compared by population, birth rate, and urbanization rate.",
+                "defaultPlan": [
+                  {
+                    "dataField": "population",
+                    "subitemId": "sub_01",
+                    "subitemName": "Canopy",
+                    "channels": [
+                      "size"
+                    ]
+                  },
+                  {
+                    "dataField": "birth_rate",
+                    "subitemId": "sub_03",
+                    "subitemName": "Sapling",
+                    "channels": [
+                      "lightness"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "population",
+                  "subitemOptions": [
+                    {
+                      "name": "Canopy",
+                      "geometry": "area",
+                      "description": "The combined leafy crown of a recognizable forest stand.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Tree trunk",
+                      "geometry": "line",
+                      "description": "A structural stem supporting the canopy.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Sapling",
+                      "geometry": "point",
+                      "description": "A small young tree representing renewal.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Forest floor",
+                      "geometry": "area",
+                      "description": "The ground beneath the forest stand.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "birth_rate",
+                  "subitemOptions": [
+                    {
+                      "name": "Canopy",
+                      "geometry": "area",
+                      "description": "The combined leafy crown of a recognizable forest stand.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Tree trunk",
+                      "geometry": "line",
+                      "description": "A structural stem supporting the canopy.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Sapling",
+                      "geometry": "point",
+                      "description": "A small young tree representing renewal.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Forest floor",
+                      "geometry": "area",
+                      "description": "The ground beneath the forest stand.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "lightness"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Use one forest stand and one equal-sized sapling per city, separating population area from renewal lightness."
+              },
+              "image_prompt": "Create a magazine-quality infographic titled Forests of Urban Life. Show five clearly labeled forest stands, one per source city. Encode population using the total Canopy area on a common proportional scale, keeping tree silhouettes similar. Next to each stand place one Sapling of the same physical size. Its lightness alone represents birth_rate on a sequential dark-to-light scale, with higher birth rates lighter. Keep trunk heights, tree counts and sapling geometry consistent, so only the intended channels carry quantities. Label every city with its population and birth rate, and include separate canopy-area and sapling-lightness legends. The established forest and young sapling should make population stock and renewal recognizable without claiming a universal relationship or predicting future growth. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of forest green, warm ochre, muted blue and ivory, and Clean composition with purposeful detail. Use only supplied city records; avoid extra data trees, invented measurements, unsupported units and urbanization mappings.",
+              "mapping": [
+                {
+                  "data_field": "population",
+                  "visual_element": "Canopy",
+                  "channel": "size"
+                },
+                {
+                  "data_field": "birth_rate",
+                  "visual_element": "Sapling",
+                  "channel": "lightness"
+                }
+              ],
+              "image_path": "assets/city_population_repository_06.webp",
+              "render_prompt": "Create a magazine-quality infographic titled Forests of Urban Life. Show five clearly labeled forest stands, one per source city. Encode population using the total Canopy area on a common proportional scale, keeping tree silhouettes similar. Next to each stand place one Sapling of the same physical size. Its lightness alone represents birth_rate on a sequential dark-to-light scale, with higher birth rates lighter. Keep trunk heights, tree counts and sapling geometry consistent, so only the intended channels carry quantities. Label every city with its population and birth rate, and include separate canopy-area and sapling-lightness legends. The established forest and young sapling should make population stock and renewal recognizable without claiming a universal relationship or predicting future growth. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of forest green, warm ochre, muted blue and ivory, and Clean composition with purposeful detail. Use only supplied city records; avoid extra data trees, invented measurements, unsupported units and urbanization mappings.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly FIVE data vignettes: Beijing, Shanghai, Guangzhou, Shenzhen, Hangzhou. Encode population and birth_rate only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"city\": \"Beijing\",\n    \"population\": 2154,\n    \"birth_rate\": 8.5,\n    \"urbanization_rate\": 86.5\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"population\": 2428,\n    \"birth_rate\": 7.8,\n    \"urbanization_rate\": 88.1\n  },\n  {\n    \"city\": \"Guangzhou\",\n    \"population\": 1530,\n    \"birth_rate\": 9.2,\n    \"urbanization_rate\": 82.3\n  },\n  {\n    \"city\": \"Shenzhen\",\n    \"population\": 1344,\n    \"birth_rate\": 8.9,\n    \"urbanization_rate\": 100.0\n  },\n  {\n    \"city\": \"Hangzhou\",\n    \"population\": 1194,\n    \"birth_rate\": 8.1,\n    \"urbanization_rate\": 78.9\n  }\n]",
+              "review": {
+                "note": "五城与数值一致，成熟树冠和幼苗的概念区分较自然。树木数量、树干高度与幼苗形态也发生变化；没有证明面积与明度严格遵循共享尺度。"
+              }
+            }
+          ]
+        }
+      },
+      "module1": {
+        "header": {
+          "semanticKeywords": [
+            "city",
+            "resident",
+            "infant",
+            "building"
+          ],
+          "contextDescription": "This dataset likely compares city populations, birth rates, and urbanization levels across five cities."
+        },
+        "insight": {
+          "dataFacts": [
+            "Shanghai and Beijing have larger populations but lower birth"
+          ]
+        },
+        "fusion": {
+          "boundFields": [
+            {
+              "field": "Urban population dynamics",
+              "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+              "dimensions": [
+                "population",
+                "birth_rate"
+              ]
+            }
+          ],
+          "contextDescription": "Five cities are compared by population, birth rate, and urbanization rate."
+        }
+      },
+      "selected_bound_field": {
+        "field": "Urban population dynamics",
+        "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+        "dimensions": [
+          "population",
+          "birth_rate"
+        ]
+      },
+      "agent4": {
+        "variations": [
+          {
+            "field": "Urban population dynamics",
+            "keyword": "forest",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 1,
+            "strategy": "替代",
+            "dimensions": [
+              "象征关系",
+              "尺寸",
+              "时间"
+            ],
+            "original_keyword": "Urban population dynamics"
+          },
+          {
+            "field": "Urban population dynamics",
+            "keyword": "ecosystem",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 1,
+            "strategy": "替代",
+            "dimensions": [
+              "象征关系",
+              "尺寸",
+              "时间"
+            ],
+            "original_keyword": "Urban population dynamics"
+          },
+          {
+            "field": "Urban population dynamics",
+            "keyword": "hive",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 1,
+            "strategy": "替代",
+            "dimensions": [
+              "象征关系",
+              "尺寸",
+              "时间"
+            ],
+            "original_keyword": "Urban population dynamics"
+          },
+          {
+            "field": "Urban population dynamics",
+            "keyword": "colony",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 1,
+            "strategy": "替代",
+            "dimensions": [
+              "象征关系",
+              "尺寸",
+              "时间"
+            ],
+            "original_keyword": "Urban population dynamics"
+          },
+          {
+            "field": "Urban population dynamics",
+            "keyword": "archipelago",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 0,
+            "strategy": "",
+            "dimensions": [],
+            "original_keyword": ""
+          },
+          {
+            "field": "Urban population dynamics",
+            "keyword": "reservoir",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 0,
+            "strategy": "",
+            "dimensions": [],
+            "original_keyword": ""
+          }
+        ]
+      },
+      "agent5": {
+        "enhancedVariations": [
+          {
+            "field": "Urban population dynamics",
+            "keyword": "forest",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 1
+          },
+          {
+            "field": "Urban population dynamics",
+            "keyword": "ecosystem",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 1
+          },
+          {
+            "field": "Urban population dynamics",
+            "keyword": "hive",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 1
+          },
+          {
+            "field": "Urban population dynamics",
+            "keyword": "colony",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 1
+          },
+          {
+            "field": "Urban population dynamics",
+            "keyword": "archipelago",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 0
+          },
+          {
+            "field": "Urban population dynamics",
+            "keyword": "reservoir",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "method": 0
+          }
+        ]
+      },
+      "theme_fill_ids": [
+        "m07",
+        "m08"
+      ],
+      "module2_controller": {
+        "variations": [
+          {
+            "id": "m05",
+            "field": "Urban population dynamics",
+            "keyword": "archipelago",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "theme": "Nature",
+            "method": "blind",
+            "guidedmethod": null,
+            "guided2ndLevelMethod": null,
+            "rNorm": 1.0,
+            "thumb": "https://ex.com/thumbs/archipelago.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "population",
+              "birth_rate"
+            ]
+          },
+          {
+            "id": "m06",
+            "field": "Urban population dynamics",
+            "keyword": "reservoir",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "theme": "Artifact",
+            "method": "blind",
+            "guidedmethod": null,
+            "guided2ndLevelMethod": null,
+            "rNorm": 0.33,
+            "thumb": "https://ex.com/thumbs/reservoir.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "population",
+              "birth_rate"
+            ]
+          },
+          {
+            "id": "m07",
+            "field": "Urban population dynamics",
+            "keyword": "heart",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "theme": "Body",
+            "method": "blind",
+            "guidedmethod": null,
+            "guided2ndLevelMethod": null,
+            "rNorm": 0.0,
+            "thumb": "https://ex.com/thumbs/heart.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "population",
+              "birth_rate"
+            ]
+          },
+          {
+            "id": "m04",
+            "field": "Urban population dynamics",
+            "keyword": "colony",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "theme": "Life",
+            "method": "guided",
+            "guidedmethod": "语义维度",
+            "guided2ndLevelMethod": "象征关系",
+            "rNorm": 1.0,
+            "thumb": "https://ex.com/thumbs/colony.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "population",
+              "birth_rate"
+            ]
+          },
+          {
+            "id": "m08",
+            "field": "Urban population dynamics",
+            "keyword": "journey",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "theme": "Others",
+            "method": "blind",
+            "guidedmethod": null,
+            "guided2ndLevelMethod": null,
+            "rNorm": 0.67,
+            "thumb": "https://ex.com/thumbs/journey.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "population",
+              "birth_rate"
+            ]
+          },
+          {
+            "id": "m01",
+            "field": "Urban population dynamics",
+            "keyword": "forest",
+            "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+            "theme": "Nature",
+            "method": "guided",
+            "guidedmethod": "语义维度",
+            "guided2ndLevelMethod": "象征关系",
+            "rNorm": 0.0,
+            "thumb": "https://ex.com/thumbs/forest.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "population",
+              "birth_rate"
+            ]
+          }
+        ],
+        "links": [
+          {
+            "source": "m05",
+            "target": "m01",
+            "distance": 9.1
+          }
+        ],
+        "themes": [
+          {
+            "name": "Nature",
+            "color": "#0C91BE"
+          },
+          {
+            "name": "Artifact",
+            "color": "#87C11A"
+          },
+          {
+            "name": "Body",
+            "color": "#C183DC"
+          },
+          {
+            "name": "Life",
+            "color": "#F19A64"
+          },
+          {
+            "name": "Others",
+            "color": "#E1C769"
+          }
+        ],
+        "message": "隐喻生成完成"
+      },
+      "status": "complete"
+    },
+    {
+      "name": "renewable_energy",
+      "synthetic": true,
+      "records": [
+        {
+          "region": "North",
+          "year": 2020,
+          "solar_output": 120,
+          "wind_output": 80,
+          "total_output": 200
+        },
+        {
+          "region": "North",
+          "year": 2021,
+          "solar_output": 148,
+          "wind_output": 86,
+          "total_output": 234
+        },
+        {
+          "region": "North",
+          "year": 2022,
+          "solar_output": 171,
+          "wind_output": 102,
+          "total_output": 273
+        },
+        {
+          "region": "South",
+          "year": 2020,
+          "solar_output": 95,
+          "wind_output": 110,
+          "total_output": 205
+        },
+        {
+          "region": "South",
+          "year": 2021,
+          "solar_output": 130,
+          "wind_output": 124,
+          "total_output": 254
+        },
+        {
+          "region": "South",
+          "year": 2022,
+          "solar_output": 168,
+          "wind_output": 139,
+          "total_output": 307
+        }
+      ],
+      "arms": {
+        "direct": {
+          "candidates": [
+            {
+              "keyword": "harvest",
+              "reason": "An increasingly abundant grain harvest provides a recognizable analogy for growing solar energy output.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "wheat stalk",
+                  "channel": "horizontal position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "grain head",
+                  "channel": "area"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled Harvesting Sunlight. Arrange two rows of three wheat stalks, North above South. Horizontal position encodes 2020, 2021, and 2022 with aligned, equally spaced year positions. Grain-head area is proportional to solar_output on a shared scale across the two rows. Keep stalk heights and kernel styling consistent. Print each of the six solar-output values beside its grain head. Include an area legend and a note that output rises in both regions while the gap narrows. Use no extra years or regions, and do not encode wind or total output.",
+              "id": "renewable_energy_direct_01",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/renewable_energy_direct_01.webp",
+              "render_prompt": "Create an editorial infographic titled Harvesting Sunlight. Arrange two rows of three wheat stalks, North above South. Horizontal position encodes 2020, 2021, and 2022 with aligned, equally spaced year positions. Grain-head area is proportional to solar_output on a shared scale across the two rows. Keep stalk heights and kernel styling consistent. Print each of the six solar-output values beside its grain head. Include an area legend and a note that output rises in both regions while the gap narrows. Use no extra years or regions, and do not encode wind or total output.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "两地区、三个年份及六个数值标签一致，穗头增长可见。但茎秆高度也随数值变化，增加未经指定的编码；穗头面积比例未测量。"
+              }
+            },
+            {
+              "keyword": "battery",
+              "reason": "A charging battery makes an increasing amount easy to recognize, while labels distinguish output from stored energy.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "battery case",
+                  "channel": "horizontal position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "charge fill boundary",
+                  "channel": "vertical position"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled Charging the Solar Future. Show two labeled regional rows with three same-sized batteries each. Their horizontal positions correspond to 2020, 2021, and 2022. Battery fill height represents annual solar_output on a shared zero-to-200 display scale; explain that this is an output metaphor, not actual battery charge or percent. Print all six actual values next to their fill boundaries. Keep battery outlines identical, with no unsupported energy units. Include a common vertical output scale. Show both regional increases and their near-convergence in 2022 without inventing additional years or data.",
+              "id": "renewable_energy_direct_02",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/renewable_energy_direct_02.webp",
+              "render_prompt": "Create an editorial infographic titled Charging the Solar Future. Show two labeled regional rows with three same-sized batteries each. Their horizontal positions correspond to 2020, 2021, and 2022. Battery fill height represents annual solar_output on a shared zero-to-200 display scale; explain that this is an output metaphor, not actual battery charge or percent. Print all six actual values next to their fill boundaries. Keep battery outlines identical, with no unsupported energy units. Include a common vertical output scale. Show both regional increases and their near-convergence in 2022 without inventing additional years or data.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "六个数据标签一致，明确的共同0–200刻度有利于读取。电池容易让人联想到存储电量，虽有文字说明仍需避免与产出混淆；填充高度未作像素级测量。"
+              }
+            },
+            {
+              "keyword": "river",
+              "reason": "A widening river translates increasing output into a continuous flow metaphor.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "river cross-section station",
+                  "channel": "horizontal position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "river channel",
+                  "channel": "width"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled Rivers of Sunlight. Draw two separate horizontal river ribbons labeled North and South. Place three aligned sampling stations at equally spaced 2020, 2021, and 2022 positions. At each station the ribbon's transverse width is proportional to solar_output using one shared width scale. Interpolation between stations is illustrative, not additional measurements. Print all six values at the stations and include a width legend. Keep river length and color constant between regions. The widths increase over time and become similar in 2022. Do not add tributaries, extra years, invented units, or wind and total-output encodings.",
+              "id": "renewable_energy_direct_03",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/renewable_energy_direct_03.webp",
+              "render_prompt": "Create an editorial infographic titled Rivers of Sunlight. Draw two separate horizontal river ribbons labeled North and South. Place three aligned sampling stations at equally spaced 2020, 2021, and 2022 positions. At each station the ribbon's transverse width is proportional to solar_output using one shared width scale. Interpolation between stations is illustrative, not additional measurements. Print all six values at the stations and include a width legend. Keep river length and color constant between regions. The widths increase over time and become similar in 2022. Do not add tributaries, extra years, invented units, or wind and total-output encodings.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "六个数值与年份、地区标签一致，三个观测站明确，河带宽度变化可见。点间曲线只是插值表达，不代表新增观测；宽度比例未测量。"
+              }
+            },
+            {
+              "keyword": "staircase",
+              "reason": "A rising staircase makes annual progress and narrowing regional differences easy to compare.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "step tread",
+                  "channel": "horizontal position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "step top",
+                  "channel": "vertical position"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled Steps Toward Solar Growth. Show two small staircases labeled North and South with exactly three steps each, one per year 2020, 2021, and 2022. Horizontal tread position encodes year; step-top height above a shared zero baseline represents solar_output on one common scale. Print the actual output value on each step and keep tread widths identical. Make the 2022 tops nearly equal while preserving all six values. Include one shared output scale. Keep the staircase recognizable but avoid excessive architecture, extrapolated steps, percentage claims, invented units, and other energy variables.",
+              "id": "renewable_energy_direct_04",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/renewable_energy_direct_04.webp",
+              "render_prompt": "Create an editorial infographic titled Steps Toward Solar Growth. Show two small staircases labeled North and South with exactly three steps each, one per year 2020, 2021, and 2022. Horizontal tread position encodes year; step-top height above a shared zero baseline represents solar_output on one common scale. Print the actual output value on each step and keep tread widths identical. Make the 2022 tops nearly equal while preserving all six values. Include one shared output scale. Keep the staircase recognizable but avoid excessive architecture, extrapolated steps, percentage claims, invented units, and other energy variables.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "六个数值和分组标签一致，共用零点轴便于读取。从设计判断看更像带装饰的阶梯图，隐喻新意有限；这不是独立评审结论，高度精度尚未测量。"
+              }
+            },
+            {
+              "keyword": "flower",
+              "reason": "A sequence of larger blossoms represents the increasing yield from solar energy.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "flower stem",
+                  "channel": "horizontal position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "blossom",
+                  "channel": "area"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled Solar in Bloom. Show two rows of exactly three flowers, labeled North and South. Use aligned horizontal positions for 2020, 2021, and 2022. Blossom area represents solar_output on one shared proportional area scale. Keep stem height, leaf count and petal count constant; vary overall blossom dimensions rather than adding petals. Label each blossom with its actual solar-output value, and add a size legend. The rows grow from left to right and nearly meet in blossom size in 2022. Do not add dates, regions, unsupported units, or encodings for wind and total output.",
+              "id": "renewable_energy_direct_05",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/renewable_energy_direct_05.webp",
+              "render_prompt": "Create an editorial infographic titled Solar in Bloom. Show two rows of exactly three flowers, labeled North and South. Use aligned horizontal positions for 2020, 2021, and 2022. Blossom area represents solar_output on one shared proportional area scale. Keep stem height, leaf count and petal count constant; vary overall blossom dimensions rather than adding petals. Label each blossom with its actual solar-output value, and add a size legend. The rows grow from left to right and nearly meet in blossom size in 2022. Do not add dates, regions, unsupported units, or encodings for wind and total output.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "六个数值和分组标签一致，花朵随产出增大。但花瓣数与轮廓也变化，没有严格遵守固定花瓣构成；花朵面积比例未校准。"
+              }
+            },
+            {
+              "keyword": "sail",
+              "reason": "A larger sail captures the idea of greater energy capture while retaining a clear area encoding.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "boat hull",
+                  "channel": "horizontal position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "sail",
+                  "channel": "area"
+                }
+              ],
+              "image_prompt": "Create an editorial infographic titled Sailing on Sunlight. Arrange two regional rows of three identical small boats. Horizontal hull position encodes 2020, 2021, and 2022. Use sail area proportional to solar_output on a common scale; keep hulls, mast heights and sail aspect ratios constant. Label each boat with its year and actual solar-output value. Clearly state that sails are a metaphor for solar energy capture, not measurements of wind output. Include an area legend. Both rows show increasing sails and similar final sizes. Avoid extra boats, invented dates or units, and visual encodings of the unused wind or total-output columns.",
+              "id": "renewable_energy_direct_06",
+              "origin": "direct",
+              "image_status": "generated",
+              "image_path": "assets/renewable_energy_direct_06.webp",
+              "render_prompt": "Create an editorial infographic titled Sailing on Sunlight. Arrange two regional rows of three identical small boats. Horizontal hull position encodes 2020, 2021, and 2022. Use sail area proportional to solar_output on a common scale; keep hulls, mast heights and sail aspect ratios constant. Label each boat with its year and actual solar-output value. Clearly state that sails are a metaphor for solar energy capture, not measurements of wind output. Include an area legend. Both rows show increasing sails and similar final sizes. Avoid extra boats, invented dates or units, and visual encodings of the unused wind or total-output columns.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "六个数值与标签一致。但桅杆高度和船体大小也随产出增大，违反仅改变帆面积、保持船体与桅杆恒定的约束。帆更容易联想到风能，需要文字解释太阳能绑定。"
+              }
+            }
+          ]
+        },
+        "repository": {
+          "candidates": [
+            {
+              "id": "renewable_energy_repository_01",
+              "keyword": "tree",
+              "origin": "guided",
+              "repository_method_label": "guided",
+              "theme": "Nature",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_3931a786",
+                "keyword": "tree",
+                "dataFact": "Solar output rises in both regions while their gap narrows.",
+                "contextDescription": "Annual solar, wind, and total energy output are recorded for North and South regions from 2020 through 2022.",
+                "defaultPlan": [
+                  {
+                    "dataField": "year",
+                    "subitemId": "sub_01",
+                    "subitemName": "Trunk",
+                    "channels": [
+                      "position"
+                    ]
+                  },
+                  {
+                    "dataField": "solar_output",
+                    "subitemId": "sub_02",
+                    "subitemName": "Canopy",
+                    "channels": [
+                      "size"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "year",
+                  "subitemOptions": [
+                    {
+                      "name": "Trunk",
+                      "geometry": "line",
+                      "description": "The structural stem anchoring the tree.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Canopy",
+                      "geometry": "area",
+                      "description": "The crown of light-collecting leaves.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Leaf",
+                      "geometry": "point",
+                      "description": "A small individual light collector.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Root system",
+                      "geometry": "line",
+                      "description": "The branching base supporting the tree.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "position"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "solar_output",
+                  "subitemOptions": [
+                    {
+                      "name": "Trunk",
+                      "geometry": "line",
+                      "description": "The structural stem anchoring the tree.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Canopy",
+                      "geometry": "area",
+                      "description": "The crown of light-collecting leaves.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Leaf",
+                      "geometry": "point",
+                      "description": "A small individual light collector.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Root system",
+                      "geometry": "line",
+                      "description": "The branching base supporting the tree.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Use two aligned regional rows of three trees, keeping trunk heights fixed and scaling canopy area with solar output."
+              },
+              "image_prompt": "Create a sophisticated editorial infographic titled Growing a Solar Forest. Show two horizontal rows of three recognizable trees, North above South. Encode year through the horizontal position of the Trunk, progressing from 2020 to 2022 with equal spacing and aligned columns across regions. Encode solar_output through Canopy area on one shared proportional scale. Keep trunk heights, root extent and leaf density constant so they do not add conflicting encodings. Print each actual output beside its canopy, add a common area legend, and make both rows' growth and their narrowing difference legible. Use the two region labels and three source years only. This is a visual analogy for increasing energy production, not measured plant growth. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of sage green, restrained ochre and ivory, and Clean composition with purposeful detail. Avoid invented units, extra trees, unsupported future years, decorative canopy size changes, and encodings of wind or total output.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "Trunk",
+                  "channel": "position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "Canopy",
+                  "channel": "size"
+                }
+              ],
+              "image_path": "assets/renewable_energy_repository_01.webp",
+              "render_prompt": "Create a sophisticated editorial infographic titled Growing a Solar Forest. Show two horizontal rows of three recognizable trees, North above South. Encode year through the horizontal position of the Trunk, progressing from 2020 to 2022 with equal spacing and aligned columns across regions. Encode solar_output through Canopy area on one shared proportional scale. Keep trunk heights, root extent and leaf density constant so they do not add conflicting encodings. Print each actual output beside its canopy, add a common area legend, and make both rows' growth and their narrowing difference legible. Use the two region labels and three source years only. This is a visual analogy for increasing energy production, not measured plant growth. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of sage green, restrained ochre and ivory, and Clean composition with purposeful detail. Avoid invented units, extra trees, unsupported future years, decorative canopy size changes, and encodings of wind or total output.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "六个数值和分组标签一致，树冠增长可见。但树干高度也增长，未保持指定的恒定高度；树冠面积比例未校准。"
+              }
+            },
+            {
+              "id": "renewable_energy_repository_02",
+              "keyword": "fountain",
+              "origin": "blind",
+              "repository_method_label": "blind",
+              "theme": "Artifact",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_231d9a81",
+                "keyword": "fountain",
+                "dataFact": "Solar output rises in both regions while their gap narrows.",
+                "contextDescription": "Annual solar, wind, and total energy output are recorded for North and South regions from 2020 through 2022.",
+                "defaultPlan": [
+                  {
+                    "dataField": "year",
+                    "subitemId": "sub_01",
+                    "subitemName": "Basin",
+                    "channels": [
+                      "position"
+                    ]
+                  },
+                  {
+                    "dataField": "solar_output",
+                    "subitemId": "sub_02",
+                    "subitemName": "Water jet",
+                    "channels": [
+                      "size"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "year",
+                  "subitemOptions": [
+                    {
+                      "name": "Basin",
+                      "geometry": "area",
+                      "description": "The bowl anchoring the fountain.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Water jet",
+                      "geometry": "line",
+                      "description": "An upward stream emerging from the fountain.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Nozzle",
+                      "geometry": "point",
+                      "description": "The localized outlet of the stream.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Splash pool",
+                      "geometry": "area",
+                      "description": "The receiving water surface.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "position"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "solar_output",
+                  "subitemOptions": [
+                    {
+                      "name": "Basin",
+                      "geometry": "area",
+                      "description": "The bowl anchoring the fountain.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Water jet",
+                      "geometry": "line",
+                      "description": "An upward stream emerging from the fountain.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Nozzle",
+                      "geometry": "point",
+                      "description": "The localized outlet of the stream.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Splash pool",
+                      "geometry": "area",
+                      "description": "The receiving water surface.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Use equal-sized basins in two regional rows and proportional jet heights on a shared zero-based scale."
+              },
+              "image_prompt": "Create an editorial infographic titled Fountains of Solar Energy. Arrange two rows of three elegant fountains, North above South. The horizontal position of each Basin encodes year, using equal spacing for 2020, 2021 and 2022 and alignment between regions. Solar_output is encoded by Water jet height, measured from the identical nozzle level on one shared zero-based scale. Keep basin size, jet width and fountain ornament constant. Place the actual solar-output value beside each jet and include a common height scale or a compact jet-height key. Preserve both regional increases and their narrowing gap. The water is a metaphor for energy production, not actual hydropower or water flow. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted teal, stone and ivory, and Clean composition with purposeful detail. Keep all six fountains visually separate, avoid invented units or dates, and do not encode wind or total output.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "Basin",
+                  "channel": "position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "Water jet",
+                  "channel": "size"
+                }
+              ],
+              "image_path": "assets/renewable_energy_repository_02.webp",
+              "render_prompt": "Create an editorial infographic titled Fountains of Solar Energy. Arrange two rows of three elegant fountains, North above South. The horizontal position of each Basin encodes year, using equal spacing for 2020, 2021 and 2022 and alignment between regions. Solar_output is encoded by Water jet height, measured from the identical nozzle level on one shared zero-based scale. Keep basin size, jet width and fountain ornament constant. Place the actual solar-output value beside each jet and include a common height scale or a compact jet-height key. Preserve both regional increases and their narrowing gap. The water is a metaphor for energy production, not actual hydropower or water flow. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted teal, stone and ivory, and Clean composition with purposeful detail. Keep all six fountains visually separate, avoid invented units or dates, and do not encode wind or total output.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "六个数值与分组标签一致。左侧0–200高度刻度与实际喷嘴零点未严格对齐，不能把标签正确等同于喷泉高度正确；景观装饰也增加了视觉负担。"
+              }
+            },
+            {
+              "id": "renewable_energy_repository_03",
+              "keyword": "heart",
+              "origin": "theme_fill",
+              "repository_method_label": "blind",
+              "theme": "Body",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_98d421d9",
+                "keyword": "heart",
+                "dataFact": "Solar output rises in both regions while their gap narrows.",
+                "contextDescription": "Annual solar, wind, and total energy output are recorded for North and South regions from 2020 through 2022.",
+                "defaultPlan": [
+                  {
+                    "dataField": "year",
+                    "subitemId": "sub_04",
+                    "subitemName": "Heart silhouette",
+                    "channels": [
+                      "position"
+                    ]
+                  },
+                  {
+                    "dataField": "solar_output",
+                    "subitemId": "sub_01",
+                    "subitemName": "Ventricle",
+                    "channels": [
+                      "size"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "year",
+                  "subitemOptions": [
+                    {
+                      "name": "Ventricle",
+                      "geometry": "area",
+                      "description": "The central pumping chamber.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Aorta",
+                      "geometry": "line",
+                      "description": "The principal outgoing vessel.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Valve",
+                      "geometry": "point",
+                      "description": "A localized chamber gateway.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Heart silhouette",
+                      "geometry": "area",
+                      "description": "The recognizable outline of the organ.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "position"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "solar_output",
+                  "subitemOptions": [
+                    {
+                      "name": "Ventricle",
+                      "geometry": "area",
+                      "description": "The central pumping chamber.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Aorta",
+                      "geometry": "line",
+                      "description": "The principal outgoing vessel.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Valve",
+                      "geometry": "point",
+                      "description": "A localized chamber gateway.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Heart silhouette",
+                      "geometry": "area",
+                      "description": "The recognizable outline of the organ.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Place three comparable heart cutaways per region along a shared timeline and vary only the mapped ventricle area."
+              },
+              "image_prompt": "Create an editorial infographic titled The Heart of Solar Production. Show six simplified anatomical heart cutaways arranged in two regional rows, North and South. Encode year by the horizontal position of each Heart silhouette, with aligned 2020, 2021 and 2022 columns. Encode solar_output through Ventricle area using a shared proportional area scale. Keep the outer organ outlines, vessel widths and other chambers consistent so their shapes do not introduce extra measures. Label the mapped ventricle and print all six actual output values. Include an area legend and clearly identify the region rows. Both series should grow and nearly converge by the final year. State that the heart is a metaphor for productive energy, not medical or biological data. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of restrained terracotta, slate and ivory, and Clean composition with purposeful detail. Avoid gore, extra years, invented units, and encodings of wind or total output.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "Heart silhouette",
+                  "channel": "position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "Ventricle",
+                  "channel": "size"
+                }
+              ],
+              "image_path": "assets/renewable_energy_repository_03.webp",
+              "render_prompt": "Create an editorial infographic titled The Heart of Solar Production. Show six simplified anatomical heart cutaways arranged in two regional rows, North and South. Encode year by the horizontal position of each Heart silhouette, with aligned 2020, 2021 and 2022 columns. Encode solar_output through Ventricle area using a shared proportional area scale. Keep the outer organ outlines, vessel widths and other chambers consistent so their shapes do not introduce extra measures. Label the mapped ventricle and print all six actual output values. Include an area legend and clearly identify the region rows. Both series should grow and nearly converge by the final year. State that the heart is a metaphor for productive energy, not medical or biological data. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of restrained terracotta, slate and ivory, and Clean composition with purposeful detail. Avoid gore, extra years, invented units, and encodings of wind or total output.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "六个数值和分组标签一致，外部心脏轮廓大致相同，内部心室面积有变化但较难直接比较。产出与心脏的联系需要解释，面积比例未验证。"
+              }
+            },
+            {
+              "id": "renewable_energy_repository_04",
+              "keyword": "firefly",
+              "origin": "theme_fill",
+              "repository_method_label": "blind",
+              "theme": "Life",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_39c15b06",
+                "keyword": "firefly",
+                "dataFact": "Solar output rises in both regions while their gap narrows.",
+                "contextDescription": "Annual solar, wind, and total energy output are recorded for North and South regions from 2020 through 2022.",
+                "defaultPlan": [
+                  {
+                    "dataField": "year",
+                    "subitemId": "sub_01",
+                    "subitemName": "Thorax",
+                    "channels": [
+                      "position"
+                    ]
+                  },
+                  {
+                    "dataField": "solar_output",
+                    "subitemId": "sub_02",
+                    "subitemName": "Light organ",
+                    "channels": [
+                      "lightness"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "year",
+                  "subitemOptions": [
+                    {
+                      "name": "Thorax",
+                      "geometry": "point",
+                      "description": "The central body segment anchoring the insect.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Light organ",
+                      "geometry": "area",
+                      "description": "The visible luminous patch in the abdomen.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Wing",
+                      "geometry": "area",
+                      "description": "A recognizable transparent wing.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Antenna",
+                      "geometry": "line",
+                      "description": "A slender sensory appendage.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "position"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "solar_output",
+                  "subitemOptions": [
+                    {
+                      "name": "Thorax",
+                      "geometry": "point",
+                      "description": "The central body segment anchoring the insect.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Light organ",
+                      "geometry": "area",
+                      "description": "The visible luminous patch in the abdomen.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Wing",
+                      "geometry": "area",
+                      "description": "A recognizable transparent wing.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Antenna",
+                      "geometry": "line",
+                      "description": "A slender sensory appendage.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "lightness"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Use six equal-sized fireflies on a shared timeline; keep glow area fixed and vary only light-organ lightness."
+              },
+              "image_prompt": "Create a sophisticated editorial infographic titled A Brighter Solar Signal. Show exactly six equal-sized fireflies in two rows labeled North and South. The horizontal position of each Thorax marks 2020, 2021 or 2022, with years aligned across rows. Encode solar_output solely through Light organ lightness on a shared sequential dark-ochre-to-pale-gold scale, with higher output lighter. Keep insect size, luminous patch area, wing shape and any halo extent constant. Place the six actual output values next to their insects and include a clearly calibrated lightness legend. The design should reveal brighter signals over time and similar final-year values, without implying that fireflies produce solar energy. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted gold, teal and ivory, and Clean composition with purposeful detail. Maintain contrast on a consistent neutral background; avoid dramatic lighting or glow that masks the data scale. Do not invent years, regions or units, and do not encode wind or total output.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "Thorax",
+                  "channel": "position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "Light organ",
+                  "channel": "lightness"
+                }
+              ],
+              "image_path": "assets/renewable_energy_repository_04.webp",
+              "render_prompt": "Create a sophisticated editorial infographic titled A Brighter Solar Signal. Show exactly six equal-sized fireflies in two rows labeled North and South. The horizontal position of each Thorax marks 2020, 2021 or 2022, with years aligned across rows. Encode solar_output solely through Light organ lightness on a shared sequential dark-ochre-to-pale-gold scale, with higher output lighter. Keep insect size, luminous patch area, wing shape and any halo extent constant. Place the six actual output values next to their insects and include a clearly calibrated lightness legend. The design should reveal brighter signals over time and similar final-year values, without implying that fireflies produce solar energy. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted gold, teal and ivory, and Clean composition with purposeful detail. Maintain contrast on a consistent neutral background; avoid dramatic lighting or glow that masks the data scale. Do not invent years, regions or units, and do not encode wind or total output.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "六个数值和分组标签一致，虫体大小大致恒定，发光器明度变化可见。图例最大值170却未覆盖最大数据171，是明确的图例缺陷；明度也未经定量校准。"
+              }
+            },
+            {
+              "id": "renewable_energy_repository_05",
+              "keyword": "momentum",
+              "origin": "theme_fill",
+              "repository_method_label": "blind",
+              "theme": "Others",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_2d754206",
+                "keyword": "momentum",
+                "dataFact": "Solar output rises in both regions while their gap narrows.",
+                "contextDescription": "Annual solar, wind, and total energy output are recorded for North and South regions from 2020 through 2022.",
+                "defaultPlan": [
+                  {
+                    "dataField": "year",
+                    "subitemId": "sub_04",
+                    "subitemName": "Contact point",
+                    "channels": [
+                      "position"
+                    ]
+                  },
+                  {
+                    "dataField": "solar_output",
+                    "subitemId": "sub_02",
+                    "subitemName": "Motion trail",
+                    "channels": [
+                      "size"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "year",
+                  "subitemOptions": [
+                    {
+                      "name": "Rolling sphere",
+                      "geometry": "area",
+                      "description": "A physical moving body used to make momentum recognizable.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Motion trail",
+                      "geometry": "line",
+                      "description": "A directional trace behind the moving body.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Track",
+                      "geometry": "line",
+                      "description": "The route supporting the repeated motion vignettes.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Contact point",
+                      "geometry": "point",
+                      "description": "The localized touch point between the body and track.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "position"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "solar_output",
+                  "subitemOptions": [
+                    {
+                      "name": "Rolling sphere",
+                      "geometry": "area",
+                      "description": "A physical moving body used to make momentum recognizable.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Motion trail",
+                      "geometry": "line",
+                      "description": "A directional trace behind the moving body.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Track",
+                      "geometry": "line",
+                      "description": "The route supporting the repeated motion vignettes.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Contact point",
+                      "geometry": "point",
+                      "description": "The localized touch point between the body and track.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Use two rows of equal spheres, chronological anchor positions, and trails whose lengths represent annual output rather than speed or growth rate."
+              },
+              "image_prompt": "Create a refined editorial infographic titled Solar Momentum. Make the abstract metaphor concrete using six equal-sized rolling spheres with visible Motion trails. Arrange them in two rows labeled North and South. The horizontal position of each sphere's Contact point encodes 2020, 2021 or 2022, aligned between the rows. Encode solar_output with Motion trail length using one common zero-based length scale. Keep spheres, trail thickness, and track appearance constant, and reserve enough room that neighboring trails do not overlap. Print each actual output at its chronological anchor and include a trail-length legend. Explicitly explain that length represents annual solar output, not measured velocity, acceleration or year-over-year growth. Preserve increasing values and near-convergence in 2022. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted teal, ochre and cream, and Clean composition with purposeful detail. Keep the moving objects recognizable rather than turning the design into unlabeled arrows. Avoid extra years, regions, invented units, and other energy-variable encodings.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "Contact point",
+                  "channel": "position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "Motion trail",
+                  "channel": "size"
+                }
+              ],
+              "image_path": "assets/renewable_energy_repository_05.webp",
+              "render_prompt": "Create a refined editorial infographic titled Solar Momentum. Make the abstract metaphor concrete using six equal-sized rolling spheres with visible Motion trails. Arrange them in two rows labeled North and South. The horizontal position of each sphere's Contact point encodes 2020, 2021 or 2022, aligned between the rows. Encode solar_output with Motion trail length using one common zero-based length scale. Keep spheres, trail thickness, and track appearance constant, and reserve enough room that neighboring trails do not overlap. Print each actual output at its chronological anchor and include a trail-length legend. Explicitly explain that length represents annual solar output, not measured velocity, acceleration or year-over-year growth. Preserve increasing values and near-convergence in 2022. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted teal, ochre and cream, and Clean composition with purposeful detail. Keep the moving objects recognizable rather than turning the design into unlabeled arrows. Avoid extra years, regions, invented units, and other energy-variable encodings.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "六个数值与分组标签一致，运动轨迹随产出延长。但渐隐使轨迹起点不明确，难以用共同长度尺度读取；球体大小略有差异，动势还可能被理解成速度或增长率。"
+              }
+            },
+            {
+              "id": "renewable_energy_repository_06",
+              "keyword": "orchard",
+              "origin": "guided",
+              "repository_method_label": "guided",
+              "theme": "Nature",
+              "image_status": "generated",
+              "mapping_spec": {
+                "mapping_id": "map_324e0d7b",
+                "keyword": "orchard",
+                "dataFact": "Solar output rises in both regions while their gap narrows.",
+                "contextDescription": "Annual solar, wind, and total energy output are recorded for North and South regions from 2020 through 2022.",
+                "defaultPlan": [
+                  {
+                    "dataField": "year",
+                    "subitemId": "sub_01",
+                    "subitemName": "Tree row",
+                    "channels": [
+                      "position"
+                    ]
+                  },
+                  {
+                    "dataField": "solar_output",
+                    "subitemId": "sub_02",
+                    "subitemName": "Fruit",
+                    "channels": [
+                      "size"
+                    ]
+                  }
+                ],
+                "field1": {
+                  "dataField": "year",
+                  "subitemOptions": [
+                    {
+                      "name": "Tree row",
+                      "geometry": "line",
+                      "description": "An aligned row of productive fruit trees.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Fruit",
+                      "geometry": "area",
+                      "description": "A recognizable fruit showing the orchard's yield.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Basket",
+                      "geometry": "area",
+                      "description": "A harvest container beneath a tree.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Branch",
+                      "geometry": "line",
+                      "description": "The supporting structure bearing fruit.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "size",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "orientation",
+                      "shape"
+                    ],
+                    "default": [
+                      "position"
+                    ]
+                  }
+                },
+                "field2": {
+                  "dataField": "solar_output",
+                  "subitemOptions": [
+                    {
+                      "name": "Tree row",
+                      "geometry": "line",
+                      "description": "An aligned row of productive fruit trees.",
+                      "subitem_id": "sub_01"
+                    },
+                    {
+                      "name": "Fruit",
+                      "geometry": "area",
+                      "description": "A recognizable fruit showing the orchard's yield.",
+                      "subitem_id": "sub_02"
+                    },
+                    {
+                      "name": "Basket",
+                      "geometry": "area",
+                      "description": "A harvest container beneath a tree.",
+                      "subitem_id": "sub_03"
+                    },
+                    {
+                      "name": "Branch",
+                      "geometry": "line",
+                      "description": "The supporting structure bearing fruit.",
+                      "subitem_id": "sub_04"
+                    }
+                  ],
+                  "channels": {
+                    "allowed": [
+                      "position",
+                      "orientation",
+                      "lightness",
+                      "color",
+                      "texture",
+                      "size",
+                      "shape"
+                    ],
+                    "default": [
+                      "size"
+                    ]
+                  }
+                },
+                "mapping_reasoning": "Use two orchard rows with three time positions and one fruit per observation; fruit area shares one scale across regions."
+              },
+              "image_prompt": "Create a magazine-quality infographic titled The Solar Orchard. Arrange two horizontal Tree rows labeled North and South. Positions along each row encode 2020, 2021 and 2022, with equal spacing and aligned years across regions. Place exactly one prominent Fruit at each observation, and encode solar_output through its area on a shared proportional scale. Keep tree size, branch complexity, fruit shape and fruit count constant; vary fruit dimensions rather than adding fruit. Print the actual output next to every fruit, include a fruit-area key, and show both increasing yields and their narrowing regional difference. Use a recognizable cultivated orchard with restrained botanical detail, not a literal claim about agricultural production. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted leaf green, warm gold and ivory, and Clean composition with purposeful detail. Use only the six source observations. Avoid extra fruit that resembles data, invented dates or units, and encodings for wind or total output.",
+              "mapping": [
+                {
+                  "data_field": "year",
+                  "visual_element": "Tree row",
+                  "channel": "position"
+                },
+                {
+                  "data_field": "solar_output",
+                  "visual_element": "Fruit",
+                  "channel": "size"
+                }
+              ],
+              "image_path": "assets/renewable_energy_repository_06.webp",
+              "render_prompt": "Create a magazine-quality infographic titled The Solar Orchard. Arrange two horizontal Tree rows labeled North and South. Positions along each row encode 2020, 2021 and 2022, with equal spacing and aligned years across regions. Place exactly one prominent Fruit at each observation, and encode solar_output through its area on a shared proportional scale. Keep tree size, branch complexity, fruit shape and fruit count constant; vary fruit dimensions rather than adding fruit. Print the actual output next to every fruit, include a fruit-area key, and show both increasing yields and their narrowing regional difference. Use a recognizable cultivated orchard with restrained botanical detail, not a literal claim about agricultural production. Use Editorial illustration style, Modern infographic design, a Data storytelling aesthetic, a Sophisticated color palette of muted leaf green, warm gold and ivory, and Clean composition with purposeful detail. Use only the six source observations. Avoid extra fruit that resembles data, invented dates or units, and encodings for wind or total output.\n\nSHARED RENDERING CONTRACT FOR BOTH METHODS:\nCreate one landscape 3:2 editorial infographic. Use a warm ivory background, clear dark editorial typography, restrained natural colors and flat illustration with subtle paper texture. No glossy 3D or photorealism.\nPreserve the proposal's specified metaphor, visual elements and data mappings; do not substitute a different encoding. Use only the source records below. Print all encoded numeric values and the entity labels so the image can be audited. Add a small 'Synthetic test data' note. Physical units are not specified: do not invent them, percentages, or measurements.\nLegends must explain the actual visual channels. Keep quantitative scales shared across comparable marks. Distinguish data marks from legend marks. No additional data entities, years, or inferred causal claims. Unused source columns are context only; do not invent extra visual encodings for them.\nExactly SIX data observations: North and South, each with 2020, 2021, 2022. Encode year and solar_output only.\nAUTHORITATIVE SOURCE RECORDS:\n[\n  {\n    \"region\": \"North\",\n    \"year\": 2020,\n    \"solar_output\": 120,\n    \"wind_output\": 80,\n    \"total_output\": 200\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2021,\n    \"solar_output\": 148,\n    \"wind_output\": 86,\n    \"total_output\": 234\n  },\n  {\n    \"region\": \"North\",\n    \"year\": 2022,\n    \"solar_output\": 171,\n    \"wind_output\": 102,\n    \"total_output\": 273\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2020,\n    \"solar_output\": 95,\n    \"wind_output\": 110,\n    \"total_output\": 205\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2021,\n    \"solar_output\": 130,\n    \"wind_output\": 124,\n    \"total_output\": 254\n  },\n  {\n    \"region\": \"South\",\n    \"year\": 2022,\n    \"solar_output\": 168,\n    \"wind_output\": 139,\n    \"total_output\": 307\n  }\n]",
+              "review": {
+                "note": "六个数值和分组标签一致，每棵树一个主要果实，树体大小大致恒定，有利于区分背景和编码部件。果实面积差异显得较大，比例未测量；图例果实的扁椭圆与实际果实形状不一致。"
+              }
+            }
+          ]
+        }
+      },
+      "module1": {
+        "header": {
+          "semanticKeywords": [
+            "sun",
+            "turbine",
+            "generator",
+            "calendar"
+          ],
+          "contextDescription": "This dataset likely tracks annual solar, wind, and total energy production in two regions."
+        },
+        "insight": {
+          "dataFacts": [
+            "Solar output rises in both regions as their gap narrows."
+          ]
+        },
+        "fusion": {
+          "boundFields": [
+            {
+              "field": "Solar production trends",
+              "dataFact": "Solar output rises in both regions while their gap narrows.",
+              "dimensions": [
+                "year",
+                "solar_output"
+              ]
+            }
+          ],
+          "contextDescription": "Annual solar, wind, and total energy output are recorded for North and South regions from 2020 through 2022."
+        }
+      },
+      "selected_bound_field": {
+        "field": "Solar production trends",
+        "dataFact": "Solar output rises in both regions while their gap narrows.",
+        "dimensions": [
+          "year",
+          "solar_output"
+        ]
+      },
+      "agent4": {
+        "variations": [
+          {
+            "field": "Solar production trends",
+            "keyword": "tree",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 1,
+            "strategy": "替代",
+            "dimensions": [
+              "因果关系",
+              "类属关系",
+              "象征关系"
+            ],
+            "original_keyword": "Solar production trends"
+          },
+          {
+            "field": "Solar production trends",
+            "keyword": "orchard",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 1,
+            "strategy": "替代",
+            "dimensions": [
+              "因果关系",
+              "类属关系",
+              "象征关系"
+            ],
+            "original_keyword": "Solar production trends"
+          },
+          {
+            "field": "Solar production trends",
+            "keyword": "generator",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 1,
+            "strategy": "替代",
+            "dimensions": [
+              "因果关系",
+              "类属关系",
+              "象征关系"
+            ],
+            "original_keyword": "Solar production trends"
+          },
+          {
+            "field": "Solar production trends",
+            "keyword": "engine",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 1,
+            "strategy": "替代",
+            "dimensions": [
+              "因果关系",
+              "类属关系",
+              "象征关系"
+            ],
+            "original_keyword": "Solar production trends"
+          },
+          {
+            "field": "Solar production trends",
+            "keyword": "fountain",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 0,
+            "strategy": "",
+            "dimensions": [],
+            "original_keyword": ""
+          },
+          {
+            "field": "Solar production trends",
+            "keyword": "ladder",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 0,
+            "strategy": "",
+            "dimensions": [],
+            "original_keyword": ""
+          }
+        ]
+      },
+      "agent5": {
+        "enhancedVariations": [
+          {
+            "field": "Solar production trends",
+            "keyword": "tree",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 1
+          },
+          {
+            "field": "Solar production trends",
+            "keyword": "orchard",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 1
+          },
+          {
+            "field": "Solar production trends",
+            "keyword": "generator",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 1
+          },
+          {
+            "field": "Solar production trends",
+            "keyword": "engine",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 1
+          },
+          {
+            "field": "Solar production trends",
+            "keyword": "fountain",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 0
+          },
+          {
+            "field": "Solar production trends",
+            "keyword": "ladder",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "method": 0
+          }
+        ]
+      },
+      "theme_fill_ids": [
+        "m07",
+        "m08",
+        "m09"
+      ],
+      "module2_controller": {
+        "variations": [
+          {
+            "id": "m01",
+            "field": "Solar production trends",
+            "keyword": "tree",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "theme": "Nature",
+            "method": "guided",
+            "guidedmethod": "语义维度",
+            "guided2ndLevelMethod": "因果关系",
+            "rNorm": 0.0,
+            "thumb": "https://ex.com/thumbs/tree.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "year",
+              "solar_output"
+            ]
+          },
+          {
+            "id": "m05",
+            "field": "Solar production trends",
+            "keyword": "fountain",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "theme": "Artifact",
+            "method": "blind",
+            "guidedmethod": null,
+            "guided2ndLevelMethod": null,
+            "rNorm": 1.0,
+            "thumb": "https://ex.com/thumbs/fountain.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "year",
+              "solar_output"
+            ]
+          },
+          {
+            "id": "m07",
+            "field": "Solar production trends",
+            "keyword": "heart",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "theme": "Body",
+            "method": "blind",
+            "guidedmethod": null,
+            "guided2ndLevelMethod": null,
+            "rNorm": 0.0,
+            "thumb": "https://ex.com/thumbs/heart.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "year",
+              "solar_output"
+            ]
+          },
+          {
+            "id": "m08",
+            "field": "Solar production trends",
+            "keyword": "firefly",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "theme": "Life",
+            "method": "blind",
+            "guidedmethod": null,
+            "guided2ndLevelMethod": null,
+            "rNorm": 0.0,
+            "thumb": "https://ex.com/thumbs/firefly.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "year",
+              "solar_output"
+            ]
+          },
+          {
+            "id": "m09",
+            "field": "Solar production trends",
+            "keyword": "momentum",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "theme": "Others",
+            "method": "blind",
+            "guidedmethod": null,
+            "guided2ndLevelMethod": null,
+            "rNorm": 0.0,
+            "thumb": "https://ex.com/thumbs/momentum.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "year",
+              "solar_output"
+            ]
+          },
+          {
+            "id": "m02",
+            "field": "Solar production trends",
+            "keyword": "orchard",
+            "dataFact": "Solar output rises in both regions while their gap narrows.",
+            "theme": "Nature",
+            "method": "guided",
+            "guidedmethod": "语义维度",
+            "guided2ndLevelMethod": "类属关系",
+            "rNorm": 1.0,
+            "thumb": "https://ex.com/thumbs/orchard.png",
+            "mapping_spec": null,
+            "dimensions": [
+              "year",
+              "solar_output"
+            ]
+          }
+        ],
+        "links": [
+          {
+            "source": "m01",
+            "target": "m02",
+            "distance": 14.3
+          }
+        ],
+        "themes": [
+          {
+            "name": "Nature",
+            "color": "#0C91BE"
+          },
+          {
+            "name": "Artifact",
+            "color": "#87C11A"
+          },
+          {
+            "name": "Body",
+            "color": "#C183DC"
+          },
+          {
+            "name": "Life",
+            "color": "#F19A64"
+          },
+          {
+            "name": "Others",
+            "color": "#E1C769"
+          }
+        ],
+        "message": "隐喻生成完成"
+      },
+      "status": "complete"
+    }
+  ],
+  "text_response_count": 81,
+  "images_generated": 24,
+  "visual_review_count": 24,
+  "methodological_limits": [
+    "Two synthetic examples; one run per example and arm",
+    "Same current Codex context; no independent evaluation",
+    "Unequal text-generation budget; token usage unavailable",
+    "Both Blind paths used native LLM fallback; vector exploration benefit not tested",
+    "No measured geometric calibration or user study"
+  ]
+}

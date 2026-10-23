@@ -1,0 +1,60 @@
+--- a/metaphor_backend/agents/module2_metaphor_generation/module2_controller.py
++++ b/metaphor_backend/agents/module2_metaphor_generation/module2_controller.py
+@@ -10,6 +10,7 @@
+ import os
+ import asyncio
+ import aiohttp
++import re
+ from langchain_openai import ChatOpenAI
+ from langchain.schema import HumanMessage, SystemMessage
+ 
+@@ -134,6 +135,7 @@
+         )
+         
+         keywords_str = ", ".join([f'"{kw}"' for kw in keywords])
++        keywords_list = keywords_str
+         
+         prompt = f"""
+ 你是一个主题分类专家。请将待分类词汇"{keywords_str}"中的每个词汇分类到以下5个主题之一：
+@@ -947,7 +949,8 @@
+         # ✅ 优化1：根据变体数量动态调整并发数和超时
+         total_variations = len(variations_for_module3)
+         
+-        if os.getenv("SKIP_IMAGE_GEN", "false").lower() in ["1", "true", "yes"]:
++        skip_image_gen = os.getenv("SKIP_IMAGE_GEN", "false").lower() in ["1", "true", "yes"]
++        if skip_image_gen:
+             for var in enhanced_variations:
+                 var.thumb = generate_thumb_url(var.keyword)
+                 var.mapping_spec = None
+@@ -977,7 +980,7 @@
+         }
+         
+         # ✅ 优化2：分批处理(如果变体数量超过30个)
+-        if total_variations > 30:
++        if not skip_image_gen and total_variations > 30:
+             print(f"📦 变体数量较多({total_variations})，启用分批处理...")
+             await process_variations_in_batches(
+                 enhanced_variations,
+@@ -985,7 +988,7 @@
+                 context_description,
+                 timeout_seconds
+             )
+-        else:
++        elif not skip_image_gen:
+             # 正常批量处理
+             try:
+                 async with aiohttp.ClientSession() as session:
+--- a/metaphor_backend/agents/module2_metaphor_generation/feature_rewrite_agent.py
++++ b/metaphor_backend/agents/module2_metaphor_generation/feature_rewrite_agent.py
+@@ -82,7 +82,10 @@
+             "Now rewrite strictly and ONLY return the output JSON.\n"
+         )
+ 
+-        chain = create_chain(prompt_template)
++        chain = create_chain(
++            prompt_template.replace("{", "{{").replace("}", "}}")
++            + "\nInput variations:\n{variations}\n"
++        )
+ 
+         # 结构化输入：直接传 JSON，以减少模型偏差
+         input_payload = {

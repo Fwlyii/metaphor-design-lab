@@ -1,0 +1,610 @@
+{
+  "author": "current Codex conversation; explicit design-selection judgments, not independent evaluation or measured creativity",
+  "scale": "0–3 ordinal design judgments; missing entries stop selection",
+  "examples": {
+    "city_population": {
+      "archipelago": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "landmass",
+        "reason": "岛屿面积可承载人口；出生率需用独立小岛通道解释，避免暗示迁移。",
+        "valid_noun": true
+      },
+      "beacon": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "light",
+        "reason": "灯体面积和光强可以分开编码，但光强与出生率的联系需要说明。",
+        "valid_noun": true
+      },
+      "body": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "body",
+        "reason": "身体轮廓与内部部件可分开编码；人口与出生率的具体对应仍需解释。",
+        "valid_noun": true
+      },
+      "circulation": {
+        "fit": 2,
+        "visible": 1,
+        "mapping": 2,
+        "family": "abstract",
+        "reason": "循环是过程概念，需先转为具体对象才能画图。",
+        "valid_noun": true
+      },
+      "clock": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "instrument",
+        "reason": "表盘面积和指针角度可独立编码，出生率与节律的关系需要限定。",
+        "valid_noun": true
+      },
+      "colony": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "animal_colony",
+        "reason": "群体规模与育幼部件可分别对应人口存量和出生率。",
+        "valid_noun": true
+      },
+      "constellation": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "stars",
+        "reason": "星团面积与星点明度可分开表达，但更新语义较弱。",
+        "valid_noun": true
+      },
+      "cradle": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "care_object",
+        "reason": "出生关联明确；人口总量对应摇篮容器尺度需要补充解释。",
+        "valid_noun": true
+      },
+      "desert": {
+        "fit": 1,
+        "visible": 3,
+        "mapping": 2,
+        "family": "terrain",
+        "reason": "稀疏沙漠可能让读者推断人口下降，而原事实没有这种结论。",
+        "valid_noun": true
+      },
+      "ecosystem": {
+        "fit": 2,
+        "visible": 1,
+        "mapping": 2,
+        "family": "abstract",
+        "reason": "生态系统范围太广，需要选具体载体。",
+        "valid_noun": true
+      },
+      "forest": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "plant",
+        "reason": "成熟树冠与新芽可区分人口存量和出生率。",
+        "valid_noun": true
+      },
+      "fountain": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "flow",
+        "reason": "蓄水体与新增水流可分开编码，但不能把出生率误写成总入流人数。",
+        "valid_noun": true
+      },
+      "garden": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "plant",
+        "reason": "成株规模和新生部件可分别编码人口与出生率。",
+        "valid_noun": true
+      },
+      "habitat": {
+        "fit": 2,
+        "visible": 2,
+        "mapping": 2,
+        "family": "habitat",
+        "reason": "栖息地是可画场景，但需明确两个独立的承载部件。",
+        "valid_noun": true
+      },
+      "harbor": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "port",
+        "reason": "港口规模可表达存量；新船容易被读成迁移，需要明确限定出生率通道。",
+        "valid_noun": true
+      },
+      "heart": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "body",
+        "reason": "心室体量与主动脉宽度提供两个部件；使用符号对应而不作生理因果解释。",
+        "valid_noun": true
+      },
+      "heartbeat": {
+        "fit": 2,
+        "visible": 1,
+        "mapping": 2,
+        "family": "abstract",
+        "reason": "心跳是过程，需要额外转成心脏或波形对象。",
+        "valid_noun": true
+      },
+      "hive": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "animal_colony",
+        "reason": "蜂房与育幼部件适合分开表达人口和更新。",
+        "valid_noun": true
+      },
+      "hourglas": {
+        "fit": 0,
+        "visible": 0,
+        "mapping": 0,
+        "family": "invalid",
+        "reason": "原单词hourglass被原仓库单数化规则截成hourglas，应拒绝进入生图。",
+        "valid_noun": false
+      },
+      "landscape": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "terrain",
+        "reason": "可画场景，但出生率需要新增独立部件，主题较宽泛。",
+        "valid_noun": true
+      },
+      "lantern": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "light",
+        "reason": "灯体面积和灯芯明度能分开编码，出生语义需要文字辅助。",
+        "valid_noun": true
+      },
+      "legacy": {
+        "fit": 1,
+        "visible": 1,
+        "mapping": 1,
+        "family": "abstract",
+        "reason": "抽象遗产概念缺乏直接的双字段视觉部件。",
+        "valid_noun": true
+      },
+      "mosaic": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "tile",
+        "reason": "整体面积与独立小块明度可形成双通道；不把块数当额外数据。",
+        "valid_noun": true
+      },
+      "mountain": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "terrain",
+        "reason": "山体面积与独立地表部件可编码，但更新语义较弱。",
+        "valid_noun": true
+      },
+      "network": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "network",
+        "reason": "网络整体与节点属性可分开编码；禁止制造数据中不存在的城市连边。",
+        "valid_noun": true
+      },
+      "nursery": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 2,
+        "family": "care_scene",
+        "reason": "出生联系明确，整体人口量需要单独背景尺度。",
+        "valid_noun": true
+      },
+      "oasi": {
+        "fit": 0,
+        "visible": 0,
+        "mapping": 0,
+        "family": "invalid",
+        "reason": "原单词oasis被原仓库单数化规则截成oasi，应拒绝。",
+        "valid_noun": false
+      },
+      "orchestra": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "performance",
+        "reason": "集体规模可对应人口，更新通道不如育幼隐喻直接。",
+        "valid_noun": true
+      },
+      "reef": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "marine_life",
+        "reason": "群落规模与新生端部可分别表达人口存量和出生率。",
+        "valid_noun": true
+      },
+      "reservoir": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "water_storage",
+        "reason": "水面面积与入口宽度能区分存量和更新率；不解释为真实水文。",
+        "valid_noun": true
+      },
+      "ring": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "ring",
+        "reason": "圆环面积和独立新生环的明度可分开编码，避免暗示原数据包含年龄。",
+        "valid_noun": true
+      },
+      "river": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "flow",
+        "reason": "流域规模与支流通道可独立表达，不能把出生率误当净人口增长率。",
+        "valid_noun": true
+      },
+      "season": {
+        "fit": 2,
+        "visible": 1,
+        "mapping": 1,
+        "family": "abstract",
+        "reason": "季节是时间概念，原数据不是时间序列，需要额外载体。",
+        "valid_noun": true
+      },
+      "seedling": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "plant",
+        "reason": "幼苗主体与独立新芽可形成两个明确部件。",
+        "valid_noun": true
+      },
+      "sieve": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "filter",
+        "reason": "容器与入口可独立编码，但过滤会引入未观测流失的联想。",
+        "valid_noun": true
+      },
+      "symphony": {
+        "fit": 2,
+        "visible": 1,
+        "mapping": 1,
+        "family": "abstract",
+        "reason": "交响乐主要是听觉概念，缺少直接的可视双字段载体。",
+        "valid_noun": true
+      },
+      "tapestry": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "textile",
+        "reason": "织物面积与输入线束宽度可以独立绑定两个字段。",
+        "valid_noun": true
+      },
+      "vessel": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "container",
+        "reason": "容器主体与入口两个部件能区分人口存量与出生率。",
+        "valid_noun": true
+      }
+    },
+    "renewable_energy": {
+      "ascent": {
+        "fit": 2,
+        "visible": 1,
+        "mapping": 2,
+        "family": "abstract",
+        "reason": "上升是抽象方向，需转成阶梯等具体载体。",
+        "valid_noun": true
+      },
+      "beacon": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "light",
+        "reason": "横向年份位置与发光部件强度能分开表达产出。",
+        "valid_noun": true
+      },
+      "calendar": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "calendar",
+        "reason": "年份格位置明确，格内标记面积可表达产出，但生产语义较弱。",
+        "valid_noun": true
+      },
+      "canopy": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "plant",
+        "reason": "年份位置与树冠面积提供独立编码，保持树干恒定。",
+        "valid_noun": true
+      },
+      "dawn": {
+        "fit": 1,
+        "visible": 2,
+        "mapping": 2,
+        "family": "sky",
+        "reason": "黎明可能引入日内时间含义，与年度生产量不一致。",
+        "valid_noun": true
+      },
+      "delta": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "flow",
+        "reason": "年份位置与水道宽度可表达产出，支流不得暗示额外观测。",
+        "valid_noun": true
+      },
+      "engine": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 2,
+        "family": "machine",
+        "reason": "生产装置对应产出，但需先选择一个清楚的可变部件。",
+        "valid_noun": true
+      },
+      "fountain": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "flow",
+        "reason": "年份位置与喷流高度可分开编码，必须使用共同喷嘴零点。",
+        "valid_noun": true
+      },
+      "generator": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 2,
+        "family": "machine",
+        "reason": "产能关联明确，但需避免用不可见功率作为视觉属性。",
+        "valid_noun": true
+      },
+      "harvest": {
+        "fit": 3,
+        "visible": 2,
+        "mapping": 3,
+        "family": "plant",
+        "reason": "可画成收成场景，年份与产出量可分开表达；需固定作物构成。",
+        "valid_noun": true
+      },
+      "heart": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "body",
+        "reason": "年份位置与心室面积可独立表达，产出与器官功能的关联需要说明。",
+        "valid_noun": true
+      },
+      "hourglas": {
+        "fit": 0,
+        "visible": 0,
+        "mapping": 0,
+        "family": "invalid",
+        "reason": "原单词hourglass被单数化截成hourglas，拒绝损坏词形。",
+        "valid_noun": false
+      },
+      "ladder": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "steps",
+        "reason": "年份位置与台阶高度易于编码，但更接近装饰图表。",
+        "valid_noun": true
+      },
+      "landscape": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "terrain",
+        "reason": "场景宽泛，需要新增指定部件才能绑定产出。",
+        "valid_noun": true
+      },
+      "lantern": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "light",
+        "reason": "年份位置与灯芯明度提供独立通道，外壳需保持恒定。",
+        "valid_noun": true
+      },
+      "leaf": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "plant",
+        "reason": "采光联系明确；年份位置与叶片面积可独立编码。",
+        "valid_noun": true
+      },
+      "loom": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "textile",
+        "reason": "年份位置与织物面积可表达产出，需文字说明太阳能生产联系。",
+        "valid_noun": true
+      },
+      "mill": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "machine",
+        "reason": "生产联系可解释，但转速不适合静态图，需另选可见通道。",
+        "valid_noun": true
+      },
+      "momentum": {
+        "fit": 2,
+        "visible": 1,
+        "mapping": 2,
+        "family": "abstract",
+        "reason": "动量不是具体对象，且可能把产出量误读为增长率。",
+        "valid_noun": true
+      },
+      "mountain": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "terrain",
+        "reason": "年份位置和山体大小可编码，产出联系较弱。",
+        "valid_noun": true
+      },
+      "orchard": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "plant",
+        "reason": "年份位置与单个果实面积可表达产出；树体与果实数量应固定。",
+        "valid_noun": true
+      },
+      "peak": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "terrain",
+        "reason": "年份位置与山峰高度可编码，但要避免误导为峰值统计。",
+        "valid_noun": true
+      },
+      "pulse": {
+        "fit": 1,
+        "visible": 2,
+        "mapping": 2,
+        "family": "wave",
+        "reason": "脉冲强度或频率容易与年度总产出混淆。",
+        "valid_noun": true
+      },
+      "ring": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "ring",
+        "reason": "年份位置与圆环面积可独立表达产出，生产联系需说明。",
+        "valid_noun": true
+      },
+      "river": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "flow",
+        "reason": "年份站位和水带宽度可表达生产流，点间曲线仅为连接。",
+        "valid_noun": true
+      },
+      "rosette": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "plant",
+        "reason": "年份位置与花盘面积可编码，但太阳能生产联系较弱。",
+        "valid_noun": true
+      },
+      "sail": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "sail",
+        "reason": "年份位置与帆面积可编码，但容易让人联想到风能。",
+        "valid_noun": true
+      },
+      "sapling": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "plant",
+        "reason": "年份位置与树冠面积可分开表达增长，非编码茎干保持固定。",
+        "valid_noun": true
+      },
+      "shadow": {
+        "fit": 1,
+        "visible": 3,
+        "mapping": 2,
+        "family": "light",
+        "reason": "阴影与光照的反向联想会增加读图负担。",
+        "valid_noun": true
+      },
+      "sponge": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "container",
+        "reason": "湿润面积能编码，但吸收量可能被读成储量。",
+        "valid_noun": true
+      },
+      "spring": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "flow",
+        "reason": "按泉眼理解可以表达产出流，但需要消除弹簧和春季的歧义。",
+        "valid_noun": true
+      },
+      "staircase": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "steps",
+        "reason": "年份位置和踏面高度容易校准，但隐喻新意需另行评审。",
+        "valid_noun": true
+      },
+      "sunflower": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "plant",
+        "reason": "太阳关联明确，年份位置与花盘面积可独立绑定。",
+        "valid_noun": true
+      },
+      "terrace": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 3,
+        "family": "terrain",
+        "reason": "年份位置与梯田面积可编码，农业产出到能源产出的联系需要解释。",
+        "valid_noun": true
+      },
+      "tide": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "flow",
+        "reason": "水位可编码产出，但潮汐周期不是原数据支持的结论。",
+        "valid_noun": true
+      },
+      "tree": {
+        "fit": 3,
+        "visible": 3,
+        "mapping": 3,
+        "family": "plant",
+        "reason": "采光生长与生产量有可解释关联，年份与树冠面积可分开编码。",
+        "valid_noun": true
+      },
+      "workshop": {
+        "fit": 2,
+        "visible": 3,
+        "mapping": 2,
+        "family": "machine",
+        "reason": "生产场景可画，但双字段编码需要进一步具体化。",
+        "valid_noun": true
+      }
+    }
+  }
+}

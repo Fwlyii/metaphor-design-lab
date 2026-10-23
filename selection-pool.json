@@ -1,0 +1,450 @@
+{
+  "status": "recorded_generation_replayed",
+  "new_model_calls": 0,
+  "replayed_response_segments": 26,
+  "examples": [
+    {
+      "name": "city_population",
+      "bound_field": {
+        "field": "Urban population dynamics",
+        "dataFact": "Shanghai and Beijing combine larger populations with comparatively lower birth rates.",
+        "dimensions": [
+          "population",
+          "birth_rate"
+        ]
+      },
+      "raw_candidates": [
+        {
+          "keyword": "forest",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "ecosystem",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "hive",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "colony",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "clock",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "heartbeat",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "mosaic",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "tapestry",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "orchestra",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "symphony",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "network",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "constellation",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "reef",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "habitat",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "nursery",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "cradle",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "garden",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "season",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "mountain",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "landscape",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "lantern",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "beacon",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "seedling",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "ring",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "vessel",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "harbor",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "body",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "heart",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "river",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "circulation",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "hourglas",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "legacy",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "desert",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "oasi",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "sieve",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "fountain",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "archipelago",
+          "origin": "blind_fallback",
+          "strategy": ""
+        },
+        {
+          "keyword": "reservoir",
+          "origin": "blind_fallback",
+          "strategy": ""
+        },
+        {
+          "keyword": "tapestry",
+          "origin": "blind_fallback",
+          "strategy": ""
+        },
+        {
+          "keyword": "cradle",
+          "origin": "blind_fallback",
+          "strategy": ""
+        },
+        {
+          "keyword": "harbor",
+          "origin": "blind_fallback",
+          "strategy": ""
+        }
+      ],
+      "blind_path": "recorded LLM fallback; vector input failure unchanged"
+    },
+    {
+      "name": "renewable_energy",
+      "bound_field": {
+        "field": "Solar production trends",
+        "dataFact": "Solar output rises in both regions while their gap narrows.",
+        "dimensions": [
+          "year",
+          "solar_output"
+        ]
+      },
+      "raw_candidates": [
+        {
+          "keyword": "tree",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "orchard",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "generator",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "engine",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "staircase",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "ascent",
+          "origin": "guided",
+          "strategy": "替代"
+        },
+        {
+          "keyword": "sunflower",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "rosette",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "sail",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "harvest",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "calendar",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "ring",
+          "origin": "guided",
+          "strategy": "合并"
+        },
+        {
+          "keyword": "terrace",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "landscape",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "leaf",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "canopy",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "mill",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "workshop",
+          "origin": "guided",
+          "strategy": "适应"
+        },
+        {
+          "keyword": "mountain",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "peak",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "sapling",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "tree",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "lantern",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "beacon",
+          "origin": "guided",
+          "strategy": "修改"
+        },
+        {
+          "keyword": "heart",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "pulse",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "river",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "delta",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "ladder",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "momentum",
+          "origin": "guided",
+          "strategy": "重构"
+        },
+        {
+          "keyword": "hourglas",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "spring",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "shadow",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "dawn",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "sponge",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "fountain",
+          "origin": "guided",
+          "strategy": "颠倒"
+        },
+        {
+          "keyword": "fountain",
+          "origin": "blind_fallback",
+          "strategy": ""
+        },
+        {
+          "keyword": "ladder",
+          "origin": "blind_fallback",
+          "strategy": ""
+        },
+        {
+          "keyword": "orchard",
+          "origin": "blind_fallback",
+          "strategy": ""
+        },
+        {
+          "keyword": "loom",
+          "origin": "blind_fallback",
+          "strategy": ""
+        },
+        {
+          "keyword": "tide",
+          "origin": "blind_fallback",
+          "strategy": ""
+        },
+        {
+          "keyword": "beacon",
+          "origin": "blind_fallback",
+          "strategy": ""
+        }
+      ],
+      "blind_path": "recorded LLM fallback; vector input failure unchanged"
+    }
+  ]
+}

@@ -10,3 +10,12 @@
 - 具体代码修复、实际 Blind 兜底与候选截断情况见网页说明。
 
 这是静态 HTML / CSS / JavaScript 网站，可通过 GitHub Pages 直接访问。
+
+
+## 改进筛选回放
+
+原轮次的候选上限配置是6，原仓库默认30。新增分支在完整候选池上保留六种Guided策略各1个，以及4个不重复的Blind兜底候选，每例10个。
+
+`candidate-selection.py` 与 `selection-pool.json`、`selection-review.json` 可用于复核筛选。选择优先级是当前Codex的设计判断，不是独立效果评分。
+
+本次只回放并完成筛选，尚未执行改进分支的Module3或重新生图。原来的24张图片属于原轮次。Blind的主题短语到词表接口问题已定位，本次回放仍保留原始兜底结果。

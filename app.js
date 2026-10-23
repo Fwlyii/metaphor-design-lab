@@ -60,7 +60,7 @@
       const description=hideMethods?'6 套完整方案':arm==='direct'?'一次构思回答 · 全部六项延展':city?'Guided 2 · Blind兜底 2 · 主题补词 2':'Guided 2 · Blind兜底 1 · 主题补词 3';
       return `<section class="arm ${arm}" aria-label="${esc(name)}"><div class="arm-head"><div class="arm-title"><span class="arm-mark">${hideMethods?(arm==='direct'?'X':'Y'):(arm==='direct'?'A':'B')}</span><h3>${esc(name)}</h3></div><small>${esc(description)}</small></div><div class="cards">${shown.map((c)=>card(c,candidates.findIndex(x=>x.id===c.id))).join('')||'<p class="empty">这一组还没有收藏，取消“仅看收藏”即可查看全部方案。</p>'}</div></section>`;
     }).join('');
-    $('gallery-foot').textContent='本案例共12张图，每组6张。编号是原返回顺序，不是质量排名；所有候选都进入了生图。收藏仅保存在你的浏览器中。';
+    $('gallery-foot').textContent='本案例共12张图，每组6张。编号是原返回顺序，不是质量排名；该轮最终保留的候选均已生图。收藏仅保存在你的浏览器中。';
     document.body.classList.toggle('blind-mode',hideMethods);
     $('arms').querySelectorAll('[data-detail]').forEach(b=>b.addEventListener('click',()=>showDetail(b.dataset.detail)));
     $('arms').querySelectorAll('[data-favorite]').forEach(b=>b.addEventListener('click',()=>toggleFavorite(b.dataset.favorite)));
@@ -77,5 +77,9 @@
   });
   $('patch-text').textContent=data.patch;
   $('settings-table').innerHTML=`<table><thead><tr><th>环节</th><th>两例合计响应段数</th><th>说明</th></tr></thead><tbody>${[['共享 Module1','8','每例四段，两组共用'],['普通直接提示','2','每例一次，输出六套完整方案'],['Guided','24','六种策略×选维度与生成两步×两例'],['Blind 原生兜底','2','多词主题不在词向量表中'],['Agent5 / 主题分类','4','每例各一批'],['主题均衡补词','5','城市2段，能源3段'],['全部候选的 Module3','36','12个仓库候选×部件、映射、提示词三步']].map(r=>'<tr>'+r.map(v=>'<td>'+esc(v)+'</td>').join('')+'</tr>').join('')}</tbody></table><p>配置：totalLimit=6，blindRatio=0.4，主题均衡开启，Agent7 v5 模式开启。原生图片分支关闭，统一交给内置生图。最终比例会因主题补词与裁剪变化。</p>`;
+  const revised = window.SELECTION_DATA;
+  if (revised && $('revised-selections')) {
+    $('revised-selections').innerHTML = revised.examples.map(e => `<section class="evidence"><h3>${e.name === 'city_population' ? '城市人口' : '区域太阳能产出'} · 10个改进候选</h3><table><thead><tr><th>保留来源</th><th>候选词</th><th>选择依据与约束</th></tr></thead><tbody>${e.selected.map(c => `<tr><td>${esc(c.selected_strategy ? 'Guided · ' + c.selected_strategy : 'Blind · 模型兜底')}</td><td>${esc(c.keyword)}</td><td>${esc(c.assessment.reason)}</td></tr>`).join('')}</tbody></table></section>`).join('');
+  }
   render();
 })();
